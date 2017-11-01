@@ -1,0 +1,350 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2016.2
+  Build 1577090 on Thu Jun 02 16:59:10 MDT 2016
+  Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'srs383' on host 'en-ec-ecelinux-01.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-693.1.1.el7.x86_64) on Wed Nov 01 17:36:55 EDT 2017
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/srs383/ECE5775/Labs/lab4/ecelinux'
+INFO: [HLS 200-10] Creating and opening project '/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj'.
+INFO: [HLS 200-10] Adding design file 'cnn.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'cnn_test.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'layer.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'data' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+   Compiling ../../../../cnn_test.cpp in release mode
+   Compiling ../../../../layer.cpp in release mode
+   Compiling ../../../../cnn.cpp in release mode
+   Generating csim.exe
+#1: 	TestInstance=0x3041060800 	Interpreted=1 	Expected=1
+#2: 	TestInstance=0x4081020400 	Interpreted=1 	Expected=1
+#3: 	TestInstance=0x4081020400 	Interpreted=1 	Expected=1
+#4: 	TestInstance=0x2041020400 	Interpreted=1 	Expected=1
+#5: 	TestInstance=0x4081020600 	Interpreted=1 	Expected=1
+#6: 	TestInstance=0x6081020c00 	Interpreted=1 	Expected=1
+#7: 	TestInstance=0x20c1020800 	Interpreted=1 	Expected=1
+#8: 	TestInstance=0x4081020400 	Interpreted=1 	Expected=1
+#9: 	TestInstance=0x6081020400 	Interpreted=1 	Expected=1
+#10: 	TestInstance=0x2081020400 	Interpreted=1 	Expected=1
+#11: 	TestInstance=0x0c081830600 	Interpreted=1 	Expected=1
+#12: 	TestInstance=0x1061861800 	Interpreted=1 	Expected=1
+#13: 	TestInstance=0x20c1060c00 	Interpreted=1 	Expected=1
+#14: 	TestInstance=0x4081020400 	Interpreted=1 	Expected=1
+#15: 	TestInstance=0x20c1020400 	Interpreted=1 	Expected=1
+#16: 	TestInstance=0x20c1020400 	Interpreted=1 	Expected=1
+#17: 	TestInstance=0x4081020400 	Interpreted=1 	Expected=1
+#18: 	TestInstance=0x3041860800 	Interpreted=1 	Expected=1
+#19: 	TestInstance=0x20c1860800 	Interpreted=1 	Expected=1
+#20: 	TestInstance=0x40c1020400 	Interpreted=1 	Expected=1
+#21: 	TestInstance=0x20c1060800 	Interpreted=1 	Expected=1
+#22: 	TestInstance=0x2041020c00 	Interpreted=1 	Expected=1
+#23: 	TestInstance=0x2041860c00 	Interpreted=1 	Expected=1
+#24: 	TestInstance=0x4183070300 	Interpreted=4 	Expected=1 	[Mismatch!]
+#25: 	TestInstance=0x0e1c1860f00 	Interpreted=2 	Expected=2
+#26: 	TestInstance=0x0e041060f00 	Interpreted=2 	Expected=2
+#27: 	TestInstance=0x0c3c1060e00 	Interpreted=2 	Expected=2
+#28: 	TestInstance=0x08181e70c00 	Interpreted=2 	Expected=2
+#29: 	TestInstance=0x08181078000 	Interpreted=2 	Expected=2
+#30: 	TestInstance=0x181078000 	Interpreted=2 	Expected=2
+#31: 	TestInstance=0x0c041078000 	Interpreted=2 	Expected=2
+#32: 	TestInstance=0x0e060c7be00 	Interpreted=2 	Expected=2
+#33: 	TestInstance=0x0e040820c00 	Interpreted=2 	Expected=2
+#34: 	TestInstance=0x3c7cb8000 	Interpreted=2 	Expected=2
+#35: 	TestInstance=0x0e260870f00 	Interpreted=2 	Expected=2
+#36: 	TestInstance=0x20e041060f00 	Interpreted=2 	Expected=2
+#37: 	TestInstance=0x71c08f9800 	Interpreted=2 	Expected=2
+#38: 	TestInstance=0x0c040870c00 	Interpreted=2 	Expected=2
+#39: 	TestInstance=0x0f1618f9800 	Interpreted=2 	Expected=2
+#40: 	TestInstance=0x0e040831e00 	Interpreted=2 	Expected=2
+#41: 	TestInstance=0x20c1060200 	Interpreted=1 	Expected=2 	[Mismatch!]
+#42: 	TestInstance=0x6043870a00 	Interpreted=2 	Expected=2
+#43: 	TestInstance=0x61e0878c00 	Interpreted=2 	Expected=2
+#44: 	TestInstance=0x6141870200 	Interpreted=9 	Expected=2 	[Mismatch!]
+#45: 	TestInstance=0x0c08207c000 	Interpreted=2 	Expected=2
+#46: 	TestInstance=0x0e041040e00 	Interpreted=2 	Expected=2
+#47: 	TestInstance=0x0e0c10f9f00 	Interpreted=2 	Expected=2
+#48: 	TestInstance=0x70608f1a00 	Interpreted=2 	Expected=2
+#49: 	TestInstance=0x20a041079e00 	Interpreted=2 	Expected=2
+#50: 	TestInstance=0x0e061879e00 	Interpreted=2 	Expected=2
+#51: 	TestInstance=0x1e0c3060f80 	Interpreted=2 	Expected=2
+#52: 	TestInstance=0x0e041020e00 	Interpreted=2 	Expected=2
+#53: 	TestInstance=0x10f0208f1800 	Interpreted=2 	Expected=2
+#54: 	TestInstance=0x0e0c307c000 	Interpreted=2 	Expected=2
+#55: 	TestInstance=0x20e041040e00 	Interpreted=2 	Expected=2
+#56: 	TestInstance=0x0c0c1860300 	Interpreted=2 	Expected=2
+#57: 	TestInstance=0x60434b0e00 	Interpreted=2 	Expected=2
+#58: 	TestInstance=0x70e18f9c00 	Interpreted=2 	Expected=2
+#59: 	TestInstance=0x41c18f8900 	Interpreted=2 	Expected=2
+#60: 	TestInstance=0x105126cb1e00 	Interpreted=0 	Expected=2 	[Mismatch!]
+#61: 	TestInstance=0x2070618e1f00 	Interpreted=2 	Expected=2
+#62: 	TestInstance=0x0e06381111c 	Interpreted=3 	Expected=3
+#63: 	TestInstance=0x0e0c1c31c00 	Interpreted=3 	Expected=3
+#64: 	TestInstance=0x1c3c1858f00 	Interpreted=3 	Expected=3
+#65: 	TestInstance=0x0e143c19e00 	Interpreted=3 	Expected=3
+#66: 	TestInstance=0x0e0c1c19e00 	Interpreted=3 	Expected=3
+#67: 	TestInstance=0x40c3810a00 	Interpreted=3 	Expected=3
+#68: 	TestInstance=0x60c3030a08 	Interpreted=3 	Expected=3
+#69: 	TestInstance=0x0e041811e10 	Interpreted=3 	Expected=3
+#70: 	TestInstance=0x0e0c3010e00 	Interpreted=3 	Expected=3
+#71: 	TestInstance=0x6043811c00 	Interpreted=3 	Expected=3
+#72: 	TestInstance=0x1c083808e00 	Interpreted=3 	Expected=3
+#73: 	TestInstance=0x0e081811e00 	Interpreted=3 	Expected=3
+#74: 	TestInstance=0x0e041811e00 	Interpreted=3 	Expected=3
+#75: 	TestInstance=0x0c081010400 	Interpreted=3 	Expected=3
+#76: 	TestInstance=0x0f0c0cf9f00 	Interpreted=3 	Expected=3
+#77: 	TestInstance=0x0e1c3c19e00 	Interpreted=3 	Expected=3
+#78: 	TestInstance=0x6080810c00 	Interpreted=3 	Expected=3
+#79: 	TestInstance=0x1f063809e00 	Interpreted=3 	Expected=3
+#80: 	TestInstance=0x10142878100 	Interpreted=4 	Expected=4
+#81: 	TestInstance=0x091a3c90400 	Interpreted=4 	Expected=4
+#82: 	TestInstance=0x11438a0400 	Interpreted=4 	Expected=4
+#83: 	TestInstance=0x08147878200 	Interpreted=4 	Expected=4
+#84: 	TestInstance=0x2347c70400 	Interpreted=4 	Expected=4
+#85: 	TestInstance=0x09143c70408 	Interpreted=4 	Expected=4
+#86: 	TestInstance=0x08363830600 	Interpreted=4 	Expected=4
+#87: 	TestInstance=0x11238a0000 	Interpreted=4 	Expected=4
+#88: 	TestInstance=0x08163830608 	Interpreted=4 	Expected=4
+#89: 	TestInstance=0x3147c70400 	Interpreted=4 	Expected=4
+#90: 	TestInstance=0x08142830400 	Interpreted=4 	Expected=4
+#91: 	TestInstance=0x2347830304 	Interpreted=4 	Expected=4
+#92: 	TestInstance=0x1162870400 	Interpreted=4 	Expected=4
+#93: 	TestInstance=0x1326cf0200 	Interpreted=4 	Expected=4
+#94: 	TestInstance=0x09648e0800 	Interpreted=4 	Expected=4
+#95: 	TestInstance=0x10a38b0400 	Interpreted=4 	Expected=4
+#96: 	TestInstance=0x1167860800 	Interpreted=4 	Expected=4
+#97: 	TestInstance=0x09364cf8300 	Interpreted=4 	Expected=4
+#98: 	TestInstance=0x10364cf8300 	Interpreted=4 	Expected=4
+#99: 	TestInstance=0x41a7860800 	Interpreted=4 	Expected=4
+#100: 	TestInstance=0x1167820c10 	Interpreted=4 	Expected=4
+#101: 	TestInstance=0x0a1448f8200 	Interpreted=4 	Expected=4
+#102: 	TestInstance=0x0c2878200 	Interpreted=4 	Expected=4
+#103: 	TestInstance=0x1a7c70408 	Interpreted=4 	Expected=4
+#104: 	TestInstance=0x51c68f8600 	Interpreted=4 	Expected=4
+#105: 	TestInstance=0x11e7cd0200 	Interpreted=4 	Expected=4
+#106: 	TestInstance=0x7103810600 	Interpreted=5 	Expected=5
+#107: 	TestInstance=0x0f303c68700 	Interpreted=8 	Expected=5 	[Mismatch!]
+#108: 	TestInstance=0x0e303c48f00 	Interpreted=8 	Expected=5 	[Mismatch!]
+#109: 	TestInstance=0x23e6070608 	Interpreted=5 	Expected=5
+#110: 	TestInstance=0x0f3020800 	Interpreted=5 	Expected=5
+#111: 	TestInstance=0x0f183899e00 	Interpreted=5 	Expected=5
+#112: 	TestInstance=0x1e3020c00 	Interpreted=5 	Expected=5
+#113: 	TestInstance=0x31e30b1c00 	Interpreted=5 	Expected=5
+#114: 	TestInstance=0x1e30f0c00 	Interpreted=5 	Expected=5
+#115: 	TestInstance=0x6183030e00 	Interpreted=5 	Expected=5
+#116: 	TestInstance=0x30c1021800 	Interpreted=1 	Expected=5 	[Mismatch!]
+#117: 	TestInstance=0x6081810c00 	Interpreted=5 	Expected=5
+#118: 	TestInstance=0x0c2020c00 	Interpreted=5 	Expected=5
+#119: 	TestInstance=0x3183811e00 	Interpreted=5 	Expected=5
+#120: 	TestInstance=0x0c103808e00 	Interpreted=5 	Expected=5
+#121: 	TestInstance=0x71e3851e00 	Interpreted=8 	Expected=5 	[Mismatch!]
+#122: 	TestInstance=0x7181830c00 	Interpreted=5 	Expected=5
+#123: 	TestInstance=0x1071038d0e00 	Interpreted=5 	Expected=5
+#124: 	TestInstance=0x6083c78c00 	Interpreted=6 	Expected=6
+#125: 	TestInstance=0x408103870000 	Interpreted=6 	Expected=6
+#126: 	TestInstance=0x106103078700 	Interpreted=6 	Expected=6
+#127: 	TestInstance=0x08365c78600 	Interpreted=6 	Expected=6
+#128: 	TestInstance=0x0c107cf8e00 	Interpreted=6 	Expected=6
+#129: 	TestInstance=0x6083870400 	Interpreted=6 	Expected=6
+#130: 	TestInstance=0x2081060400 	Interpreted=6 	Expected=6
+#131: 	TestInstance=0x18387c6c700 	Interpreted=6 	Expected=6
+#132: 	TestInstance=0x20c107c78400 	Interpreted=6 	Expected=6
+#133: 	TestInstance=0x3c0820408 	Interpreted=7 	Expected=7
+#134: 	TestInstance=0x41c0820410 	Interpreted=7 	Expected=7
+#135: 	TestInstance=0x23e081060c 	Interpreted=7 	Expected=7
+#136: 	TestInstance=0x083c0830608 	Interpreted=7 	Expected=7
+#137: 	TestInstance=0x0e0820c10 	Interpreted=7 	Expected=7
+#138: 	TestInstance=0x1c0810200 	Interpreted=7 	Expected=7
+#139: 	TestInstance=0x0c1c3830408 	Interpreted=9 	Expected=7 	[Mismatch!]
+#140: 	TestInstance=0x1e6830c10 	Interpreted=7 	Expected=7
+#141: 	TestInstance=0x41c0830408 	Interpreted=7 	Expected=7
+#142: 	TestInstance=0x3e4c30c10 	Interpreted=7 	Expected=7
+#143: 	TestInstance=0x71c1820820 	Interpreted=7 	Expected=7
+#144: 	TestInstance=0x3e4c10204 	Interpreted=7 	Expected=7
+#145: 	TestInstance=0x0e1c1e71810 	Interpreted=7 	Expected=7
+#146: 	TestInstance=0x3c1830608 	Interpreted=7 	Expected=7
+#147: 	TestInstance=0x3c4810608 	Interpreted=7 	Expected=7
+#148: 	TestInstance=0x41e0830c10 	Interpreted=7 	Expected=7
+#149: 	TestInstance=0x0e160820820 	Interpreted=7 	Expected=7
+#150: 	TestInstance=0x0e043860408 	Interpreted=7 	Expected=7
+#151: 	TestInstance=0x23c0830408 	Interpreted=7 	Expected=7
+#152: 	TestInstance=0x21e0820810 	Interpreted=7 	Expected=7
+#153: 	TestInstance=0x1c3c0820408 	Interpreted=7 	Expected=7
+#154: 	TestInstance=0x3c0810608 	Interpreted=7 	Expected=7
+#155: 	TestInstance=0x3e7c10608 	Interpreted=7 	Expected=7
+#156: 	TestInstance=0x3160820c10 	Interpreted=7 	Expected=7
+#157: 	TestInstance=0x081c1830600 	Interpreted=7 	Expected=7
+#158: 	TestInstance=0x43c0830408 	Interpreted=7 	Expected=7
+#159: 	TestInstance=0x0c3c0830408 	Interpreted=7 	Expected=7
+#160: 	TestInstance=0x6123850e00 	Interpreted=8 	Expected=8
+#161: 	TestInstance=0x41c1060c00 	Interpreted=8 	Expected=8
+#162: 	TestInstance=0x3c7810204 	Interpreted=9 	Expected=9
+#163: 	TestInstance=0x41c3810204 	Interpreted=9 	Expected=9
+#164: 	TestInstance=0x6166c70600 	Interpreted=9 	Expected=9
+#165: 	TestInstance=0x0c103810204 	Interpreted=9 	Expected=9
+#166: 	TestInstance=0x0e3664d8e00 	Interpreted=0 	Expected=0
+#167: 	TestInstance=0x0e3e64d8e00 	Interpreted=0 	Expected=0
+#168: 	TestInstance=0x6142850c00 	Interpreted=0 	Expected=0
+#169: 	TestInstance=0x30a2c91c00 	Interpreted=0 	Expected=0
+#170: 	TestInstance=0x0e3e7488f00 	Interpreted=0 	Expected=0
+#171: 	TestInstance=0x61a24c8e00 	Interpreted=0 	Expected=0
+#172: 	TestInstance=0x31e64f0c00 	Interpreted=0 	Expected=0
+#173: 	TestInstance=0x60c2850e00 	Interpreted=0 	Expected=0
+#174: 	TestInstance=0x30f24d1c00 	Interpreted=0 	Expected=0
+#175: 	TestInstance=0x61e2c58e00 	Interpreted=0 	Expected=0
+#176: 	TestInstance=0x0e3e6cf9e00 	Interpreted=0 	Expected=0
+#177: 	TestInstance=0x60c2850c00 	Interpreted=0 	Expected=0
+#178: 	TestInstance=0x71a2499c00 	Interpreted=0 	Expected=0
+#179: 	TestInstance=0x71a24c9a00 	Interpreted=0 	Expected=0
+#180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
+Number of test instances = 180
+Overall Error Rate = 5%
+digitrec sw         :      1 calls; 7703.013 msecs total time
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [HLS 200-10] Analyzing design file 'layer.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'cnn.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<32, 2, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_float' into 'cnn_xcel' (cnn.cpp:64).
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] cnn.cpp:53: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP1' (layer.cpp:38) in function 'perform_conv' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1' (layer.cpp:39) in function 'perform_conv' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1.1' (layer.cpp:40) in function 'perform_conv' completely.
+INFO: [XFORM 203-101] Partitioning array 'mem_conv1.V' (cnn.cpp:47) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'w_conv1'  in dimension 1 with a block factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cnn.cpp:64:13) to (cnn.cpp:63:28) in function 'cnn_xcel'... converting 7 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'perform_conv.1' (layer.cpp:32:35)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...6 expression(s) balanced.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:37:26) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:36:30) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:35:28) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:37:26) in function 'perform_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:36:30) in function 'perform_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:35:28) in function 'perform_conv'.
+INFO: [HLS 200-111] Elapsed time: 134.8 seconds; current memory usage: 231 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+WARNING: [SYN 201-103] Legalizing function name 'dut_perform_conv.1' to 'dut_perform_conv_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut_perform_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_LOOP1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_0_V_load_2', layer.cpp:41) on array 'input_0_V' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 26.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.58 seconds; current memory usage: 233 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 1.69 seconds; current memory usage: 235 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut_perform_conv_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_LOOP1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (layer.cpp:56) of variable 'p_Val2_5', layer.cpp:56 on array 'output_0_V' and 'load' operation ('output_0_V_load_1', layer.cpp:56) on array 'output_0_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_V_load_4', layer.cpp:45) on array 'input_V' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 2.07 seconds; current memory usage: 237 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_perform_conv_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 1.81 seconds; current memory usage: 239 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut_cnn_xcel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 1.55 seconds; current memory usage: 239 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_cnn_xcel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.32 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.45 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.28 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_perform_conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_mul_32s_30s_61_6': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel32_32_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_urem_9ns_9ns_9_13': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_perform_conv'.
+INFO: [HLS 200-111] Elapsed time: 0.4 seconds; current memory usage: 243 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_perform_conv_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_mul_32s_30s_61_6': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mul_mul_15ns_13ns_28_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel32_32_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_urem_13ns_9ns_13_17': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_urem_13ns_9ns_13_17_seq': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_perform_conv_1'.
+INFO: [HLS 200-111] Elapsed time: 1.97 seconds; current memory usage: 250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_cnn_xcel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_sitofp_32ns_32_6': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_cnn_xcel'.
+INFO: [HLS 200-111] Elapsed time: 1.81 seconds; current memory usage: 257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
+INFO: [HLS 200-111] Elapsed time: 0.65 seconds; current memory usage: 259 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_9ns_9ns_9_13_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_mul_32s_30s_61_6_MulnS_0'
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_w_conv1_0_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_rom' using auto ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_13ns_9ns_13_17_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_13ns_9ns_13_17_seq_div'
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_1_w_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_1_b_conv2_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv1_0_V_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv1_1_V_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv2_V_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dut_result_ram' using block RAMs.
+INFO: [HLS 200-10] Finished generating all RTL models.
+INFO: [SYSC 207-301] Generating SystemC RTL for dut.
+INFO: [VHDL 208-304] Generating VHDL RTL for dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for dut.
+INFO: [HLS 200-112] Total elapsed time: 293.662 seconds; peak memory usage: 259 MB.
