@@ -1,153 +1,17 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 23
-set name dut_urem_13ns_9ns_13_17
-set corename simcore_urem
-set op urem
-set stage_num 17
-set max_latency -1
-set registered_input 1
-set in0_width 13
-set in0_signed 0
-set in1_width 9
-set in1_signed 0
-set out_width 13
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_urem] == "ap_gen_simcore_urem"} {
-eval "ap_gen_simcore_urem { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_urem, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op urem
-set corename DivnS
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_div] == "::AESL_LIB_VIRTEX::xil_gen_div"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_div { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your platform lib"
-}
-}
-
-
-set id 34
-set name dut_urem_13ns_9ns_13_17_seq
-set corename simcore_urem_seq
-set op urem
-set stage_num 17
-set max_latency -1
-set registered_input 1
-set in0_width 13
-set in0_signed 0
-set in1_width 9
-set in1_signed 0
-set out_width 13
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_urem] == "ap_gen_simcore_urem"} {
-eval "ap_gen_simcore_urem { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_urem, check your AutoPilot builtin lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler ${name}
-}
-
-
-set op urem
-set corename DivnS_SEQ
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_div] == "::AESL_LIB_VIRTEX::xil_gen_div"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_div { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    max_latency ${max_latency} \
-    registered_input ${registered_input} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your platform lib"
-}
-}
-
-
-set id 36
-set name dut_mul_mul_15ns_13ns_28_1
+set id 42
+set name dut_mul_32s_30s_61_6
 set corename simcore_mul
 set op mul
-set stage_num 1
+set stage_num 6
 set max_latency -1
 set registered_input 1
-set in0_width 15
-set in0_signed 0
-set in1_width 13
-set in1_signed 0
-set out_width 28
-set exp i0*i1
-set arg_lists {i0 {15 0 +} i1 {13 0 +} p {28 0 +} }
+set in0_width 32
+set in0_signed 1
+set in1_width 30
+set in1_signed 1
+set out_width 61
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -165,8 +29,6 @@ eval "ap_gen_simcore_mul { \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
     out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
 }"
 } else {
 puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mul, check your AutoPilot builtin lib"
@@ -180,10 +42,10 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 set op mul
-set corename DSP48
+set corename MulnS
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul] == "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_multicycle_mul { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -198,17 +60,15 @@ eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
     out_width ${out_width} \
-    exp ${exp} \
-    arg_lists {${arg_lists}} \
 }"
 } else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, check your platform lib"
 }
 }
 
 
 # Memory (RAM/ROM)  definition:
-set ID 38
+set ID 53
 set MemName dut_perform_conv_1_w_conv2
 set CoreName ap_simcore_mem
 set PortList { 1 1 }
@@ -288,7 +148,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 39
+set ID 54
 set MemName dut_perform_conv_1_b_conv2
 set CoreName ap_simcore_mem
 set PortList { 1 }
@@ -378,7 +238,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 40 \
+    id 55 \
     name input_V \
     reset_level 1 \
     sync_rst true \
@@ -397,7 +257,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 41 \
+    id 56 \
     name output_0_V \
     reset_level 1 \
     sync_rst true \
@@ -416,7 +276,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 42 \
+    id 57 \
     name output_1_V \
     reset_level 1 \
     sync_rst true \
@@ -435,7 +295,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 43 \
+    id 58 \
     name output_2_V \
     reset_level 1 \
     sync_rst true \
@@ -454,7 +314,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 44 \
+    id 59 \
     name output_3_V \
     reset_level 1 \
     sync_rst true \

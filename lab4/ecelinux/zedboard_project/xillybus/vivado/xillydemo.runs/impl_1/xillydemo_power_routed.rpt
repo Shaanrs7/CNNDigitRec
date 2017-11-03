@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Wed Nov  1 18:06:12 2017
+| Date             : Fri Nov  3 05:29:50 2017
 | Host             : en-ec-ecelinux-01.coecis.cornell.edu running 64-bit Red Hat Enterprise Linux Server release 7.4 (Maipo)
 | Command          : report_power -file xillydemo_power_routed.rpt -pb xillydemo_power_summary_routed.pb -rpx xillydemo_power_routed.rpx
 | Design           : xillydemo
@@ -30,9 +30,9 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.951 |
-| Dynamic (W)              | 1.786 |
-| Device Static (W)        | 0.164 |
+| Total On-Chip Power (W)  | 1.953 |
+| Dynamic (W)              | 1.780 |
+| Device Static (W)        | 0.173 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 62.5  |
 | Junction Temperature (C) | 47.5  |
@@ -49,23 +49,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.036 |        6 |       --- |             --- |
-| Slice Logic              |     0.018 |    21168 |       --- |             --- |
-|   LUT as Logic           |     0.015 |     7839 |     53200 |           14.73 |
-|   Register               |     0.001 |    10001 |    106400 |            9.40 |
-|   CARRY4                 |     0.001 |      740 |     13300 |            5.56 |
+| Clocks                   |     0.038 |        6 |       --- |             --- |
+| Slice Logic              |     0.016 |    21634 |       --- |             --- |
+|   LUT as Logic           |     0.013 |     8281 |     53200 |           15.57 |
+|   Register               |     0.001 |     9885 |    106400 |            9.29 |
+|   CARRY4                 |     0.001 |      713 |     13300 |            5.36 |
 |   LUT as Distributed RAM |    <0.001 |      270 |     17400 |            1.55 |
-|   F7/F8 Muxes            |    <0.001 |      122 |     53200 |            0.23 |
-|   LUT as Shift Register  |    <0.001 |      249 |     17400 |            1.43 |
-|   Others                 |     0.000 |      895 |       --- |             --- |
-| Signals                  |     0.029 |    20074 |       --- |             --- |
-| Block RAM                |     0.008 |       48 |       140 |           34.29 |
+|   F7/F8 Muxes            |    <0.001 |      142 |     53200 |            0.27 |
+|   LUT as Shift Register  |    <0.001 |      213 |     17400 |            1.22 |
+|   Others                 |     0.000 |      861 |       --- |             --- |
+| Signals                  |     0.026 |    20554 |       --- |             --- |
+| Block RAM                |     0.008 |    129.5 |       140 |           92.50 |
 | PLL                      |     0.107 |        1 |         4 |           25.00 |
-| DSPs                     |     0.009 |       80 |       220 |           36.36 |
+| DSPs                     |     0.006 |       72 |       220 |           32.73 |
 | I/O                      |     0.046 |       85 |       200 |           42.50 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
-| Static Power             |     0.164 |          |           |                 |
-| Total                    |     1.951 |          |           |                 |
+| Static Power             |     0.173 |          |           |                 |
+| Total                    |     1.953 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.130 |       0.111 |      0.019 |
+| Vccint    |       1.000 |     0.126 |       0.104 |      0.022 |
 | Vccaux    |       1.800 |     0.076 |       0.055 |      0.021 |
 | Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -84,11 +84,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.005 |       0.000 |      0.004 |
+| Vccbram   |       1.000 |     0.010 |       0.000 |      0.010 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.756 |       0.722 |      0.033 |
+| Vccpint   |       1.000 |     0.755 |       0.722 |      0.033 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -154,7 +154,7 @@ Table of Contents
 +--------------------------------------------------------------------+-----------+
 | Name                                                               | Power (W) |
 +--------------------------------------------------------------------+-----------+
-| xillydemo                                                          |     1.786 |
+| xillydemo                                                          |     1.780 |
 |   PS_GPIO_IOBUF[0]_inst                                            |    <0.001 |
 |   PS_GPIO_IOBUF[10]_inst                                           |    <0.001 |
 |   PS_GPIO_IOBUF[11]_inst                                           |    <0.001 |
@@ -272,12 +272,12 @@ Table of Contents
 |             gntv_or_sync_fifo.gl0.rd                               |    <0.001 |
 |               grss.rsts                                            |    <0.001 |
 |                 c1                                                 |    <0.001 |
-|                 c2                                                 |     0.000 |
+|                 c2                                                 |    <0.001 |
 |               rpntr                                                |    <0.001 |
 |             gntv_or_sync_fifo.gl0.wr                               |    <0.001 |
 |               gwss.wsts                                            |    <0.001 |
 |                 c0                                                 |    <0.001 |
-|                 c1                                                 |     0.000 |
+|                 c1                                                 |    <0.001 |
 |               wpntr                                                |    <0.001 |
 |             gntv_or_sync_fifo.mem                                  |     0.002 |
 |               gbm.gbmg.gbmga.ngecc.bmg                             |     0.002 |
@@ -294,20 +294,20 @@ Table of Contents
 |             gntv_or_sync_fifo.gl0.rd                               |    <0.001 |
 |               grss.rsts                                            |    <0.001 |
 |                 c1                                                 |    <0.001 |
-|                 c2                                                 |     0.000 |
+|                 c2                                                 |    <0.001 |
 |               rpntr                                                |    <0.001 |
 |             gntv_or_sync_fifo.gl0.wr                               |    <0.001 |
 |               gwss.wsts                                            |    <0.001 |
 |                 c0                                                 |    <0.001 |
-|                 c1                                                 |     0.000 |
+|                 c1                                                 |    <0.001 |
 |               wpntr                                                |    <0.001 |
-|             gntv_or_sync_fifo.mem                                  |     0.002 |
-|               gbm.gbmg.gbmga.ngecc.bmg                             |     0.002 |
-|                 inst_blk_mem_gen                                   |     0.002 |
-|                   gnbram.gnativebmg.native_blk_mem_gen             |     0.002 |
-|                     valid.cstr                                     |     0.002 |
-|                       ramloop[0].ram.r                             |     0.002 |
-|                         prim_noinit.ram                            |     0.002 |
+|             gntv_or_sync_fifo.mem                                  |     0.001 |
+|               gbm.gbmg.gbmga.ngecc.bmg                             |     0.001 |
+|                 inst_blk_mem_gen                                   |     0.001 |
+|                   gnbram.gnativebmg.native_blk_mem_gen             |     0.001 |
+|                     valid.cstr                                     |     0.001 |
+|                       ramloop[0].ram.r                             |     0.001 |
+|                         prim_noinit.ram                            |     0.001 |
 |   fifo_8                                                           |     0.001 |
 |     U0                                                             |     0.001 |
 |       inst_fifo_gen                                                |     0.001 |
@@ -363,7 +363,7 @@ Table of Contents
 |   litearray3_reg_0_31_6_6                                          |    <0.001 |
 |   litearray3_reg_0_31_7_7                                          |    <0.001 |
 |   smb_sdata_IOBUF_inst                                             |     0.000 |
-|   smbus                                                            |    <0.001 |
+|   smbus                                                            |     0.001 |
 |     fifo                                                           |    <0.001 |
 |       U0                                                           |    <0.001 |
 |         inst_fifo_gen                                              |    <0.001 |
@@ -386,13 +386,13 @@ Table of Contents
 |                       valid.cstr                                   |    <0.001 |
 |                         ramloop[0].ram.r                           |    <0.001 |
 |                           prim_noinit.ram                          |    <0.001 |
-|   test_fpga_design                                                 |     0.039 |
-|     grp_dut_cnn_xcel_fu_106                                        |     0.038 |
-|       dut_sitofp_32ns_32_6_U45                                     |     0.004 |
-|         dut_ap_sitofp_4_no_dsp_32_u                                |     0.003 |
-|           U0                                                       |     0.003 |
-|             i_synth                                                |     0.003 |
-|               FIX_TO_FLT_OP.SPD.OP                                 |     0.003 |
+|   test_fpga_design                                                 |     0.031 |
+|     grp_dut_cnn_xcel_fu_110                                        |     0.030 |
+|       dut_sitofp_32ns_32_6_U31                                     |     0.004 |
+|         dut_ap_sitofp_4_no_dsp_32_u                                |     0.004 |
+|           U0                                                       |     0.004 |
+|             i_synth                                                |     0.004 |
+|               FIX_TO_FLT_OP.SPD.OP                                 |     0.004 |
 |                 EXP                                                |    <0.001 |
 |                   ZERO_DELAY                                       |    <0.001 |
 |                     i_pipe                                         |    <0.001 |
@@ -427,51 +427,45 @@ Table of Contents
 |                     NORM_1_OR_0.STRUCT_REQ.GENERAL.RND1            |    <0.001 |
 |                 Z_C_DEL                                            |    <0.001 |
 |                   i_pipe                                           |    <0.001 |
-|       grp_dut_perform_conv_1_fu_174                                |     0.020 |
+|       grp_dut_perform_conv_1_fu_176                                |     0.010 |
 |         b_conv2_U                                                  |    <0.001 |
 |           dut_perform_conv_1_b_conv2_rom_U                         |    <0.001 |
-|         dut_mul_32s_30s_61_6_U24                                   |     0.003 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.003 |
+|         dut_mul_32s_30s_61_6_U17                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U18                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U19                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U20                                   |     0.002 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.002 |
+|         dut_mul_32s_30s_61_6_U21                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U22                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U23                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U24                                   |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
 |         dut_mul_32s_30s_61_6_U25                                   |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U26                                   |    <0.001 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U27                                   |     0.002 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.002 |
-|         dut_mul_32s_30s_61_6_U28                                   |     0.002 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.002 |
-|         dut_mul_32s_30s_61_6_U29                                   |    <0.001 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U30                                   |     0.002 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.002 |
-|         dut_mul_32s_30s_61_6_U31                                   |    <0.001 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U32                                   |     0.002 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |     0.002 |
-|         dut_mul_mul_15ns_13ns_28_1_U36                             |    <0.001 |
-|           dut_mul_mul_15ns_13ns_28_1_DSP48_0_U                     |    <0.001 |
-|         dut_mul_mul_15ns_13ns_28_1_U37                             |    <0.001 |
-|           dut_mul_mul_15ns_13ns_28_1_DSP48_0_U                     |    <0.001 |
-|         dut_urem_13ns_9ns_13_17_U23                                |     0.002 |
-|           dut_urem_13ns_9ns_13_17_div_U                            |     0.002 |
-|             dut_urem_13ns_9ns_13_17_div_u_0                        |     0.002 |
-|         dut_urem_13ns_9ns_13_17_seq_U34                            |     0.001 |
-|           dut_urem_13ns_9ns_13_17_seq_div_U                        |     0.001 |
-|             dut_urem_13ns_9ns_13_17_seq_div_u_0                    |    <0.001 |
 |         w_conv2_U                                                  |    <0.001 |
 |           dut_perform_conv_1_w_conv2_rom_U                         |    <0.001 |
-|       grp_dut_perform_conv_fu_187                                  |     0.010 |
-|         b_conv1_U                                                  |    <0.001 |
-|           dut_perform_conv_b_conv1_rom_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U11                                   |    <0.001 |
+|       grp_dut_perform_conv_fu_161                                  |     0.012 |
+|         b_conv1_0_U                                                |    <0.001 |
+|           dut_perform_conv_b_conv1_0_rom_U                         |    <0.001 |
+|         b_conv1_1_U                                                |    <0.001 |
+|           dut_perform_conv_b_conv1_1_rom_U                         |    <0.001 |
+|         dut_mul_30s_32s_61_6_U9                                    |     0.003 |
+|           dut_mul_30s_32s_61_6_MulnS_1_U                           |     0.003 |
+|         dut_mul_32s_30s_61_6_U1                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U13                                   |    <0.001 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U15                                   |    <0.001 |
+|         dut_mul_32s_30s_61_6_U2                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
 |         dut_mul_32s_30s_61_6_U3                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
 |         dut_mul_32s_30s_61_6_U4                                    |    <0.001 |
+|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
+|         dut_mul_32s_30s_61_6_U5                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
 |         dut_mul_32s_30s_61_6_U6                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
@@ -479,47 +473,34 @@ Table of Contents
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
 |         dut_mul_32s_30s_61_6_U8                                    |    <0.001 |
 |           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_mul_32s_30s_61_6_U9                                    |    <0.001 |
-|           dut_mul_32s_30s_61_6_MulnS_0_U                           |    <0.001 |
-|         dut_urem_9ns_9ns_9_13_U1                                   |    <0.001 |
-|           dut_urem_9ns_9ns_9_13_div_U                              |    <0.001 |
-|             dut_urem_9ns_9ns_9_13_div_u_0                          |    <0.001 |
-|         dut_urem_9ns_9ns_9_13_U2                                   |    <0.001 |
-|           dut_urem_9ns_9ns_9_13_div_U                              |    <0.001 |
-|             dut_urem_9ns_9ns_9_13_div_u_0                          |    <0.001 |
-|         dut_urem_9ns_9ns_9_13_U5                                   |    <0.001 |
-|           dut_urem_9ns_9ns_9_13_div_U                              |    <0.001 |
-|             dut_urem_9ns_9ns_9_13_div_u_0                          |    <0.001 |
 |         w_conv1_0_U                                                |    <0.001 |
 |           dut_perform_conv_w_conv1_0_rom_U                         |    <0.001 |
-|       mem_conv1_0_V_U                                              |     0.002 |
-|         dut_cnn_xcel_mem_conv1_0_V_ram_U                           |     0.002 |
-|       mem_conv1_1_V_U                                              |     0.001 |
-|         dut_cnn_xcel_mem_conv1_1_V_ram_U                           |     0.001 |
-|       mem_conv1_2_V_U                                              |    <0.001 |
-|         dut_cnn_xcel_mem_conv1_1_V_ram_U                           |    <0.001 |
-|       mem_conv1_3_V_U                                              |    <0.001 |
-|         dut_cnn_xcel_mem_conv1_1_V_ram_U                           |    <0.001 |
+|         w_conv1_1_U                                                |    <0.001 |
+|           dut_perform_conv_w_conv1_1_rom_U                         |    <0.001 |
+|       mem_conv1_0_V_U                                              |    <0.001 |
+|         dut_cnn_xcel_mem_conv1_0_V_ram_U                           |    <0.001 |
+|       mem_conv1_1_V_U                                              |     0.003 |
+|         dut_cnn_xcel_mem_conv1_0_V_ram_U                           |     0.003 |
 |       mem_conv2_V_U                                                |    <0.001 |
 |         dut_cnn_xcel_mem_conv2_V_ram_U                             |    <0.001 |
 |     result_U                                                       |    <0.001 |
 |       dut_result_ram_U                                             |    <0.001 |
-|   xillybus_ins                                                     |     1.692 |
-|     system_i                                                       |     1.667 |
-|       vivado_system_i                                              |     1.667 |
+|   xillybus_ins                                                     |     1.693 |
+|     system_i                                                       |     1.669 |
+|       vivado_system_i                                              |     1.669 |
 |         processing_system7_0                                       |     1.537 |
 |           inst                                                     |     1.537 |
-|         processing_system7_0_axi_periph                            |     0.017 |
-|           m00_couplers                                             |     0.004 |
-|             auto_pc                                                |     0.004 |
-|               inst                                                 |     0.004 |
-|                 gen_axilite.gen_b2s_conv.axilite_b2s               |     0.004 |
+|         processing_system7_0_axi_periph                            |     0.018 |
+|           m00_couplers                                             |     0.005 |
+|             auto_pc                                                |     0.005 |
+|               inst                                                 |     0.005 |
+|                 gen_axilite.gen_b2s_conv.axilite_b2s               |     0.005 |
 |                   RD.ar_channel_0                                  |    <0.001 |
 |                     ar_cmd_fsm_0                                   |    <0.001 |
 |                     cmd_translator_0                               |    <0.001 |
 |                       incr_cmd_0                                   |    <0.001 |
 |                       wrap_cmd_0                                   |    <0.001 |
-|                   RD.r_channel_0                                   |    <0.001 |
+|                   RD.r_channel_0                                   |     0.001 |
 |                     rd_data_fifo_0                                 |    <0.001 |
 |                     transaction_fifo_0                             |    <0.001 |
 |                   SI_REG                                           |     0.002 |
@@ -631,14 +612,14 @@ Table of Contents
 |           inst                                                     |    <0.001 |
 |         xillybus_lite_0                                            |    <0.001 |
 |           inst                                                     |    <0.001 |
-|         xillyvga_0                                                 |     0.112 |
-|           inst                                                     |     0.112 |
-|             xillyvga_core_ins                                      |     0.112 |
-|               vga_fifo_wrapper_ins/vga_fifo                        |     0.001 |
-|                 U0                                                 |     0.001 |
-|                   inst_fifo_gen                                    |     0.001 |
-|                     gconvfifo.rf                                   |     0.001 |
-|                       grf.rf                                       |     0.001 |
+|         xillyvga_0                                                 |     0.113 |
+|           inst                                                     |     0.113 |
+|             xillyvga_core_ins                                      |     0.113 |
+|               vga_fifo_wrapper_ins/vga_fifo                        |     0.002 |
+|                 U0                                                 |     0.002 |
+|                   inst_fifo_gen                                    |     0.002 |
+|                     gconvfifo.rf                                   |     0.002 |
+|                       grf.rf                                       |     0.002 |
 |                         gntv_or_sync_fifo.gcx.clkx                 |    <0.001 |
 |                           gsync_stage[1].rd_stg_inst               |    <0.001 |
 |                           gsync_stage[1].wr_stg_inst               |    <0.001 |
@@ -664,7 +645,7 @@ Table of Contents
 |                                     prim_noinit.ram                |    <0.001 |
 |                         rstblk                                     |    <0.001 |
 |         xlconcat_0                                                 |     0.000 |
-|     xillybus_core_ins                                              |     0.025 |
+|     xillybus_core_ins                                              |     0.024 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram1       |    <0.001 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram2       |    <0.001 |
 |       axi4_send_dma_ins/xillybus_wr_fifo/ram0/Mram_fifo_ram3       |    <0.001 |

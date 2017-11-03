@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Wed Nov  1 17:41:38 2017
+* Date:           Fri Nov  3 17:32:35 2017
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        cnn.prj
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      8.64|        1.25|
+    |ap_clk  |  10.00|      8.55|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |     Latency     |     Interval    | Pipeline|
     |   min  |   max  |   min  |   max  |   Type  |
     +--------+--------+--------+--------+---------+
-    |  119105|  119105|  119106|  119106|   none  |
+    |  109298|  109298|  109299|  109299|   none  |
     +--------+--------+--------+--------+---------+
 
     + Detail: 
@@ -99,11 +99,11 @@ ST_1: tmp_V_2 [1/1] 4.38ns
 ST_2: tmp_V_3 [1/1] 4.38ns
 :7  %tmp_V_3 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %strm_in_V_V)
 
-ST_2: tmp_44 [1/1] 0.00ns
-:8  %tmp_44 = trunc i32 %tmp_V_3 to i17
+ST_2: tmp_71 [1/1] 0.00ns
+:8  %tmp_71 = trunc i32 %tmp_V_3 to i17
 
 ST_2: p_Result_s [1/1] 0.00ns
-:9  %p_Result_s = call i49 @_ssdm_op_BitConcatenate.i49.i17.i32(i17 %tmp_44, i32 %tmp_V_2)
+:9  %p_Result_s = call i49 @_ssdm_op_BitConcatenate.i49.i17.i32(i17 %tmp_71, i32 %tmp_V_2)
 
 ST_2: stg_11 [2/2] 0.00ns
 :10  call fastcc void @dut_cnn_xcel(i49 %p_Result_s, [576 x i32]* %result)
@@ -113,8 +113,8 @@ ST_2: stg_11 [2/2] 0.00ns
 ST_3: empty [1/1] 0.00ns
 :0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str44, [1 x i8]* @p_str45, [1 x i8]* @p_str46, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str47)
 
-ST_3: empty_31 [1/1] 0.00ns
-:1  %empty_31 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str40, [1 x i8]* @p_str41, [1 x i8]* @p_str42, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str43)
+ST_3: empty_35 [1/1] 0.00ns
+:1  %empty_35 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str40, [1 x i8]* @p_str41, [1 x i8]* @p_str42, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str43)
 
 ST_3: stg_14 [1/1] 0.00ns
 :2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !197
@@ -139,8 +139,8 @@ ST_4: i [1/1] 0.00ns
 ST_4: exitcond [1/1] 2.07ns
 :1  %exitcond = icmp eq i10 %i, -448
 
-ST_4: empty_32 [1/1] 0.00ns
-:2  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 576, i64 576, i64 576)
+ST_4: empty_36 [1/1] 0.00ns
+:2  %empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 576, i64 576, i64 576)
 
 ST_4: i_1 [1/1] 1.84ns
 :3  %i_1 = add i10 %i, 1

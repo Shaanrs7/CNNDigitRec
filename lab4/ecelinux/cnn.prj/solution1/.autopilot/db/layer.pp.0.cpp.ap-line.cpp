@@ -40196,9 +40196,13 @@ void perform_conv(fixed32_t input[MAX_FMAP], fixed32_t output[MAX_FMAP], const f
   for (bit32_t i = 0; i < MAX_FMAP; i++) output[i] = 0;
 #pragma empty_line
   // perform convolution kernel
+#pragma empty_line
+//#pragma HLS dataflow
        for (bit32_t n = 0; n < N; n++) {
          for (bit32_t m = 0; m < M; m++) {
+#pragma empty_line
      for (bit32_t x = 0; x < O; x++) {
+#pragma empty_line
 LOOP1: for (bit32_t y = 0; y < O; y++) {
             for (bit32_t c = 0; c < K; c++) {
              for (bit32_t r = 0; r < K; r++) {
@@ -40235,8 +40239,9 @@ LOOP1: for (bit32_t y = 0; y < O; y++) {
   // add biases and perform ReLU
   bit32_t index;
   fixed32_t biased;
-LOOP2: for (bit32_t n = 0; n < N; n++) {
-    for (bit32_t x = 0; x < O; x++) {
+  for (bit32_t n = 0; n < N; n++) {
+#pragma empty_line
+LOOP2: for (bit32_t x = 0; x < O; x++) {
       for (bit32_t y = 0; y < O; y++) {
          index = x + y * O + n * ofmap_size;
          biased = output[index] + bias[n];
@@ -40278,13 +40283,14 @@ int i_index;
 // @param[out] : output - output fmaps
 #pragma empty_line
 void perform_dense (float* input, float*output, const float*weight, const float* bias, int M, int N) {
-#pragma empty_line
+float biased;
+int w_index;
   for (int n = 0; n < N; n++) {
     for (int m = 0; m < M; m++) {
-      int w_index = m + n * M;
+      w_index = m + n * M;
       output[n] += input[m] * weight[w_index];
     }
-    float biased = output[n] + bias[n];
+     biased = output[n] + bias[n];
     output[n] = (biased > 0) ? biased : 0;
   }
 #pragma empty_line

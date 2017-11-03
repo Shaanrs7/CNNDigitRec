@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="vivado_system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1509572605"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1509572605"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1509572605"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1509700366"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1509700366"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1509700366"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/vivado_system_xillybus_lite_0_0/vivado_system_xillybus_lite_0_0.xci" Type="IP">
         <Instance HierarchyPath="xillybus_lite_0"/>

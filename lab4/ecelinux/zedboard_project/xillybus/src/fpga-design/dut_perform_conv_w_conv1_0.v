@@ -6,12 +6,12 @@
 // ==============================================================
 
 `timescale 1 ns / 1 ps
-module dut_perform_conv_w_conv1_0_rom (
-addr0, ce0, q0, addr1, ce1, q1, clk);
+(* rom_style = "block" *) module dut_perform_conv_w_conv1_0_rom (
+addr0, ce0, q0, addr1, ce1, q1, addr2, ce2, q2, addr3, ce3, q3, addr4, ce4, q4, addr5, ce5, q5, clk);
 
 parameter DWIDTH = 30;
-parameter AWIDTH = 13;
-parameter MEM_SIZE = 4608;
+parameter AWIDTH = 14;
+parameter MEM_SIZE = 9216;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -19,12 +19,28 @@ output reg[DWIDTH-1:0] q0;
 input[AWIDTH-1:0] addr1;
 input ce1;
 output reg[DWIDTH-1:0] q1;
+input[AWIDTH-1:0] addr2;
+input ce2;
+output reg[DWIDTH-1:0] q2;
+input[AWIDTH-1:0] addr3;
+input ce3;
+output reg[DWIDTH-1:0] q3;
+input[AWIDTH-1:0] addr4;
+input ce4;
+output reg[DWIDTH-1:0] q4;
+input[AWIDTH-1:0] addr5;
+input ce5;
+output reg[DWIDTH-1:0] q5;
 input clk;
 
-reg [DWIDTH-1:0] ram[MEM_SIZE-1:0];
+(* ram_style = "block" *)reg [DWIDTH-1:0] ram0[MEM_SIZE-1:0];
+(* ram_style = "block" *)reg [DWIDTH-1:0] ram1[MEM_SIZE-1:0];
+(* ram_style = "block" *)reg [DWIDTH-1:0] ram2[MEM_SIZE-1:0];
 
 initial begin
-    $readmemh("./dut_perform_conv_w_conv1_0_rom.dat", ram);
+    $readmemh("./dut_perform_conv_w_conv1_0_rom.dat", ram0);
+    $readmemh("./dut_perform_conv_w_conv1_0_rom.dat", ram1);
+    $readmemh("./dut_perform_conv_w_conv1_0_rom.dat", ram2);
 end
 
 
@@ -33,7 +49,7 @@ always @(posedge clk)
 begin 
     if (ce0) 
     begin
-        q0 <= ram[addr0];
+        q0 <= ram0[addr0];
     end
 end
 
@@ -43,7 +59,47 @@ always @(posedge clk)
 begin 
     if (ce1) 
     begin
-        q1 <= ram[addr1];
+        q1 <= ram0[addr1];
+    end
+end
+
+
+
+always @(posedge clk)  
+begin 
+    if (ce2) 
+    begin
+        q2 <= ram1[addr2];
+    end
+end
+
+
+
+always @(posedge clk)  
+begin 
+    if (ce3) 
+    begin
+        q3 <= ram1[addr3];
+    end
+end
+
+
+
+always @(posedge clk)  
+begin 
+    if (ce4) 
+    begin
+        q4 <= ram2[addr4];
+    end
+end
+
+
+
+always @(posedge clk)  
+begin 
+    if (ce5) 
+    begin
+        q5 <= ram2[addr5];
     end
 end
 
@@ -61,11 +117,23 @@ module dut_perform_conv_w_conv1_0(
     q0,
     address1,
     ce1,
-    q1);
+    q1,
+    address2,
+    ce2,
+    q2,
+    address3,
+    ce3,
+    q3,
+    address4,
+    ce4,
+    q4,
+    address5,
+    ce5,
+    q5);
 
 parameter DataWidth = 32'd30;
-parameter AddressRange = 32'd4608;
-parameter AddressWidth = 32'd13;
+parameter AddressRange = 32'd9216;
+parameter AddressWidth = 32'd14;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;
@@ -74,6 +142,18 @@ output[DataWidth - 1:0] q0;
 input[AddressWidth - 1:0] address1;
 input ce1;
 output[DataWidth - 1:0] q1;
+input[AddressWidth - 1:0] address2;
+input ce2;
+output[DataWidth - 1:0] q2;
+input[AddressWidth - 1:0] address3;
+input ce3;
+output[DataWidth - 1:0] q3;
+input[AddressWidth - 1:0] address4;
+input ce4;
+output[DataWidth - 1:0] q4;
+input[AddressWidth - 1:0] address5;
+input ce5;
+output[DataWidth - 1:0] q5;
 
 
 
@@ -84,7 +164,19 @@ dut_perform_conv_w_conv1_0_rom dut_perform_conv_w_conv1_0_rom_U(
     .q0( q0 ),
     .addr1( address1 ),
     .ce1( ce1 ),
-    .q1( q1 ));
+    .q1( q1 ),
+    .addr2( address2 ),
+    .ce2( ce2 ),
+    .q2( q2 ),
+    .addr3( address3 ),
+    .ce3( ce3 ),
+    .q3( q3 ),
+    .addr4( address4 ),
+    .ce4( ce4 ),
+    .q4( q4 ),
+    .addr5( address5 ),
+    .ce5( ce5 ),
+    .q5( q5 ));
 
 endmodule
 

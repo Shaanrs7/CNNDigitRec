@@ -1,5 +1,5 @@
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp"
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp" 1
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp"
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp" 2
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/cnn.pragma.1.cpp" 2
 # 1 "cnn.cpp"
 # 1 "cnn.cpp" 1
 # 1 "<built-in>" 1
@@ -39483,6 +39483,9 @@ const fixed32_t b_conv1[MAX_B_CONV] = { //32
 _ssdm_SpecConstant(b_conv1);
 # 18 "./model_conv.h"
 
+_ssdm_SpecArrayPartition( b_conv1, 1, "CYCLIC", 4, "");
+# 18 "./model_conv.h"
+
 
 const fixed32_t w_conv2[MAX_W_CONV] = { //18432
 
@@ -39507,13 +39510,13 @@ _ssdm_SpecConstant(b_conv2);
 # 46 "cnn.cpp" 2
 
   fixed32_t mem_conv1[800];
-_ssdm_SpecArrayPartition( mem_conv1, 1, "BLOCK", 4, "");
+_ssdm_SpecArrayPartition( mem_conv1, 1, "CYCLIC", 4, "");
 # 47 "cnn.cpp"
  //float
   fixed32_t mem_conv2[800];
 
-_ssdm_SpecArrayPartition( w_conv1, 1, "BLOCK", 4, "");
-//#pragma HLS array_partition variable= w_conv2 block factor=2 dim=1 
+_ssdm_SpecArrayPartition( w_conv1, 1, "CYCLIC", 4, "");
+//#pragma HLS array_partition variable= w_conv2 block factor=4 dim=1 
   // prepare input fmaps
   for (int i = 0; i < 49; i++) mem_conv1[i] = input[i];
 

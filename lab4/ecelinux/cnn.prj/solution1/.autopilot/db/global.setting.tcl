@@ -14,7 +14,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 1
 set ResetStyle "control"
 set ResetSyncFlag 1
@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c {../../layer.cpp ../../cnn.cpp}}
 set SourceFlags {sc {} c {{ } { }}}
-set DirectiveFile {/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/solution1.directive}
+set DirectiveFile {/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/solution1.directive}
 set TBFiles {verilog {../../data ../../cnn_test.cpp} bc {../../data ../../cnn_test.cpp} sc {../../data ../../cnn_test.cpp} vhdl {../../data ../../cnn_test.cpp} c {} cas {../../data ../../cnn_test.cpp}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

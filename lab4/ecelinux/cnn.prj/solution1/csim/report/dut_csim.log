@@ -184,5 +184,5 @@
 #180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
 Number of test instances = 180
 Overall Error Rate = 5%
-digitrec sw         :      1 calls; 7703.013 msecs total time
+digitrec sw         :      1 calls; 4580.273 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

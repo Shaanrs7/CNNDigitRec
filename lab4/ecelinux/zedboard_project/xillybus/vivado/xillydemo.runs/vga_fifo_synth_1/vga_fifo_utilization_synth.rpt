@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date         : Wed Nov  1 17:47:05 2017
+| Date         : Fri Nov  3 05:14:27 2017
 | Host         : en-ec-ecelinux-01.coecis.cornell.edu running 64-bit Red Hat Enterprise Linux Server release 7.4 (Maipo)
 | Command      : report_utilization -file vga_fifo_utilization_synth.rpt -pb vga_fifo_utilization_synth.pb
 | Design       : vga_fifo

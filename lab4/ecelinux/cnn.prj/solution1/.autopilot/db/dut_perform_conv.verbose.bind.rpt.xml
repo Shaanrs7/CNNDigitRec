@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_perform_conv'" level="0">
-<item name = "Date">Wed Nov  1 17:41:32 2017
+<item name = "Date">Fri Nov  3 17:32:28 2017
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">cnn.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.64, 1.25</column>
+<column name="ap_clk">10.00, 8.55, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">7639, 7639, 7639, 7639, none</column>
+<column name="">7629, 7629, 7629, 7629, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,10 +36,10 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">800, 800, 1, -, -, 800, no</column>
-<column name="- L_L_LOOP1">4020, 4020, 26, 5, 1, 800, yes</column>
-<column name="- LOOP2">2816, 2816, 88, -, -, 32, no</column>
-<column name=" + LOOP2.1">85, 85, 17, -, -, 5, no</column>
-<column name="  ++ LOOP2.1.1">15, 15, 3, -, -, 5, no</column>
+<column name="- L_L_LOOP1">4010, 4010, 14, 5, 1, 800, yes</column>
+<column name="- Loop 3">2816, 2816, 88, -, -, 32, no</column>
+<column name=" + LOOP2">85, 85, 17, -, -, 5, no</column>
+<column name="  ++ LOOP2.1">15, 15, 3, -, -, 5, no</column>
 </table>
 </item>
 </section>

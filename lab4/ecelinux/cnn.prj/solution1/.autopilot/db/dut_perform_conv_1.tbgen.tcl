@@ -91,7 +91,7 @@ set NewPortList {[
  	{ "name": "output_3_V_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "output_3_V", "role": "q0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"], "CDFG" : "dut_perform_conv_1", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"], "CDFG" : "dut_perform_conv_1", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "input_V", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "output_0_V", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
@@ -104,25 +104,21 @@ set RtlHierarchyInfo {[
 		"SubBlockPort" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.w_conv2_U", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.b_conv2_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_urem_13ns_9ns_13_17_U23", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U24", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U25", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U26", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U27", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U28", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U29", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U30", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U31", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U32", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mux_4to1_sel32_32_1_U33", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_urem_13ns_9ns_13_17_seq_U34", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mux_4to1_sel32_32_1_U35", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_15ns_13ns_28_1_U36", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_15ns_13ns_28_1_U37", "Parent" : "0", "Child" : []}]}
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U42", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U43", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U44", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U45", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U46", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U47", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U48", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U49", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_32s_30s_61_6_U50", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mux_4to1_sel2_32_1_U51", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mux_4to1_sel2_32_1_U52", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "105073", "Max" : "105073"}
-	, {"Name" : "Interval", "Min" : "105073", "Max" : "105073"}
+	{"Name" : "Latency", "Min" : "95276", "Max" : "95276"}
+	, {"Name" : "Interval", "Min" : "95276", "Max" : "95276"}
 ]}
 
 set Spec2ImplPortList { 

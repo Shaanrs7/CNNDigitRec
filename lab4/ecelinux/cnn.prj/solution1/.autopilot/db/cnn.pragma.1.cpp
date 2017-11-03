@@ -39438,6 +39438,9 @@ const fixed32_t b_conv1[MAX_B_CONV] = { //32
 _ssdm_SpecConstant(b_conv1);
 #18 "./model_conv.h"
 
+_ssdm_SpecArrayPartition( b_conv1, 1, "CYCLIC", 4, "");
+#18 "./model_conv.h"
+
 
 const fixed32_t w_conv2[MAX_W_CONV] = { //18432
 
@@ -39461,13 +39464,13 @@ _ssdm_SpecConstant(b_conv2);
 #46 "cnn.cpp" 2
 
   fixed32_t mem_conv1[800];
-_ssdm_SpecArrayPartition( mem_conv1, 1, "BLOCK", 4, "");
+_ssdm_SpecArrayPartition( mem_conv1, 1, "CYCLIC", 4, "");
 #47 "cnn.cpp"
  //float
   fixed32_t mem_conv2[800];
 
-_ssdm_SpecArrayPartition( w_conv1, 1, "BLOCK", 4, "");
-//#pragma HLS array_partition variable= w_conv2 block factor=2 dim=1 
+_ssdm_SpecArrayPartition( w_conv1, 1, "CYCLIC", 4, "");
+//#pragma HLS array_partition variable= w_conv2 block factor=4 dim=1 
   // prepare input fmaps
   for (int i = 0; i < 49; i++) mem_conv1[i] = input[i];
 

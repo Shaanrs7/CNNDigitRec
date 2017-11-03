@@ -3,7 +3,15 @@
         <directive functionName="cnn_xcel" label="" functionLabel="">
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="mem_conv1" positionalBoolean="4"/>
-                <option name="block" value="" positionalBoolean="type"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="4"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="cnn_xcel" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="b_conv1" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
                 <option name="factor" value="4"/>
                 <option name="dim" value="1"/>
             </pragma>

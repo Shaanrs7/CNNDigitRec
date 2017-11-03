@@ -9,8 +9,8 @@
 module dut_cnn_xcel_mem_conv1_0_V_ram (addr0, ce0, d0, we0, q0, addr1, ce1, q1,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 8;
-parameter MEM_SIZE = 200;
+parameter AWIDTH = 9;
+parameter MEM_SIZE = 400;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -68,8 +68,8 @@ module dut_cnn_xcel_mem_conv1_0_V(
     q1);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd200;
-parameter AddressWidth = 32'd8;
+parameter AddressRange = 32'd400;
+parameter AddressWidth = 32'd9;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

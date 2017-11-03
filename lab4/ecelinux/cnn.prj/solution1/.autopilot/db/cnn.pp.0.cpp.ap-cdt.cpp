@@ -39438,6 +39438,9 @@ const fixed32_t b_conv1[MAX_B_CONV] = { //32
 _ssdm_SpecConstant(b_conv1);
 #pragma line 18 "./model_conv.h"
 
+#pragma HLS ARRAY_PARTITION variable=b_conv1 cyclic factor=4 dim=1
+#pragma line 18 "./model_conv.h"
+
 #pragma empty_line
 const fixed32_t w_conv2[MAX_W_CONV] = { //18432
 #pragma empty_line
@@ -39461,13 +39464,13 @@ _ssdm_SpecConstant(b_conv2);
 #pragma line 46 "cnn.cpp" 2
 #pragma empty_line
   fixed32_t mem_conv1[800];
-#pragma HLS ARRAY_PARTITION variable=mem_conv1 block factor=4 dim=1
+#pragma HLS ARRAY_PARTITION variable=mem_conv1 cyclic factor=4 dim=1
 #pragma line 47 "cnn.cpp"
  //float
   fixed32_t mem_conv2[800];
 #pragma empty_line
-#pragma HLS array_partition variable= w_conv1 block factor=4 dim=1
-//#pragma HLS array_partition variable= w_conv2 block factor=2 dim=1 
+#pragma HLS array_partition variable= w_conv1 cyclic factor=4 dim=1
+//#pragma HLS array_partition variable= w_conv2 block factor=4 dim=1 
   // prepare input fmaps
   for (int i = 0; i < 49; i++) mem_conv1[i] = input[i];
 #pragma empty_line

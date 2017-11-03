@@ -29,7 +29,7 @@ end;
 architecture behav of dut is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "dut,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.641875,HLS_SYN_LAT=119105,HLS_SYN_TPT=none,HLS_SYN_MEM=86,HLS_SYN_DSP=79,HLS_SYN_FF=4374,HLS_SYN_LUT=6101}";
+    "dut,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.550000,HLS_SYN_LAT=109298,HLS_SYN_TPT=none,HLS_SYN_MEM=133,HLS_SYN_DSP=74,HLS_SYN_FF=3940,HLS_SYN_LUT=5401}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (4 downto 0) := "00001";
@@ -59,32 +59,32 @@ architecture behav of dut is
     signal strm_out_V_V_blk_n : STD_LOGIC;
     signal ap_sig_cseq_ST_st5_fsm_4 : STD_LOGIC;
     signal ap_sig_53 : BOOLEAN;
-    signal tmp_V_2_reg_149 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_V_2_reg_173 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_59 : BOOLEAN;
-    signal p_Result_s_fu_124_p3 : STD_LOGIC_VECTOR (48 downto 0);
-    signal p_Result_s_reg_154 : STD_LOGIC_VECTOR (48 downto 0);
-    signal i_1_fu_138_p2 : STD_LOGIC_VECTOR (9 downto 0);
-    signal i_1_reg_162 : STD_LOGIC_VECTOR (9 downto 0);
+    signal p_Result_s_fu_148_p3 : STD_LOGIC_VECTOR (48 downto 0);
+    signal p_Result_s_reg_178 : STD_LOGIC_VECTOR (48 downto 0);
+    signal i_1_fu_162_p2 : STD_LOGIC_VECTOR (9 downto 0);
+    signal i_1_reg_186 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_sig_cseq_ST_st4_fsm_3 : STD_LOGIC;
     signal ap_sig_73 : BOOLEAN;
-    signal exitcond_fu_132_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal exitcond_fu_156_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal result_address0 : STD_LOGIC_VECTOR (9 downto 0);
     signal result_ce0 : STD_LOGIC;
     signal result_q0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_dut_cnn_xcel_fu_106_ap_start : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_ap_done : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_ap_idle : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_ap_ready : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_output_V_address0 : STD_LOGIC_VECTOR (9 downto 0);
-    signal grp_dut_cnn_xcel_fu_106_output_V_ce0 : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_output_V_we0 : STD_LOGIC;
-    signal grp_dut_cnn_xcel_fu_106_output_V_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal i_reg_95 : STD_LOGIC_VECTOR (9 downto 0);
+    signal grp_dut_cnn_xcel_fu_118_ap_start : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_ap_done : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_ap_idle : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_ap_ready : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_output_V_address0 : STD_LOGIC_VECTOR (9 downto 0);
+    signal grp_dut_cnn_xcel_fu_118_output_V_ce0 : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_output_V_we0 : STD_LOGIC;
+    signal grp_dut_cnn_xcel_fu_118_output_V_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal i_reg_107 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_sig_cseq_ST_st3_fsm_2 : STD_LOGIC;
     signal ap_sig_110 : BOOLEAN;
-    signal ap_reg_grp_dut_cnn_xcel_fu_106_ap_start : STD_LOGIC := '0';
-    signal tmp_fu_144_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_44_fu_120_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal ap_reg_grp_dut_cnn_xcel_fu_118_ap_start : STD_LOGIC := '0';
+    signal tmp_fu_168_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_71_fu_144_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (4 downto 0);
 
     component dut_cnn_xcel IS
@@ -131,23 +131,23 @@ begin
         reset => ap_rst,
         address0 => result_address0,
         ce0 => result_ce0,
-        we0 => grp_dut_cnn_xcel_fu_106_output_V_we0,
-        d0 => grp_dut_cnn_xcel_fu_106_output_V_d0,
+        we0 => grp_dut_cnn_xcel_fu_118_output_V_we0,
+        d0 => grp_dut_cnn_xcel_fu_118_output_V_d0,
         q0 => result_q0);
 
-    grp_dut_cnn_xcel_fu_106 : component dut_cnn_xcel
+    grp_dut_cnn_xcel_fu_118 : component dut_cnn_xcel
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_dut_cnn_xcel_fu_106_ap_start,
-        ap_done => grp_dut_cnn_xcel_fu_106_ap_done,
-        ap_idle => grp_dut_cnn_xcel_fu_106_ap_idle,
-        ap_ready => grp_dut_cnn_xcel_fu_106_ap_ready,
-        input_V => p_Result_s_reg_154,
-        output_V_address0 => grp_dut_cnn_xcel_fu_106_output_V_address0,
-        output_V_ce0 => grp_dut_cnn_xcel_fu_106_output_V_ce0,
-        output_V_we0 => grp_dut_cnn_xcel_fu_106_output_V_we0,
-        output_V_d0 => grp_dut_cnn_xcel_fu_106_output_V_d0);
+        ap_start => grp_dut_cnn_xcel_fu_118_ap_start,
+        ap_done => grp_dut_cnn_xcel_fu_118_ap_done,
+        ap_idle => grp_dut_cnn_xcel_fu_118_ap_idle,
+        ap_ready => grp_dut_cnn_xcel_fu_118_ap_ready,
+        input_V => p_Result_s_reg_178,
+        output_V_address0 => grp_dut_cnn_xcel_fu_118_output_V_address0,
+        output_V_ce0 => grp_dut_cnn_xcel_fu_118_output_V_ce0,
+        output_V_we0 => grp_dut_cnn_xcel_fu_118_output_V_we0,
+        output_V_d0 => grp_dut_cnn_xcel_fu_118_output_V_d0);
 
 
 
@@ -165,29 +165,29 @@ begin
     end process;
 
 
-    ap_reg_grp_dut_cnn_xcel_fu_106_ap_start_assign_proc : process(ap_clk)
+    ap_reg_grp_dut_cnn_xcel_fu_118_ap_start_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_reg_grp_dut_cnn_xcel_fu_106_ap_start <= ap_const_logic_0;
+                ap_reg_grp_dut_cnn_xcel_fu_118_ap_start <= ap_const_logic_0;
             else
                 if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not((strm_in_V_V_empty_n = ap_const_logic_0)))) then 
-                    ap_reg_grp_dut_cnn_xcel_fu_106_ap_start <= ap_const_logic_1;
-                elsif ((ap_const_logic_1 = grp_dut_cnn_xcel_fu_106_ap_ready)) then 
-                    ap_reg_grp_dut_cnn_xcel_fu_106_ap_start <= ap_const_logic_0;
+                    ap_reg_grp_dut_cnn_xcel_fu_118_ap_start <= ap_const_logic_1;
+                elsif ((ap_const_logic_1 = grp_dut_cnn_xcel_fu_118_ap_ready)) then 
+                    ap_reg_grp_dut_cnn_xcel_fu_118_ap_start <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    i_reg_95_assign_proc : process (ap_clk)
+    i_reg_107_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4) and not((strm_out_V_V_full_n = ap_const_logic_0)))) then 
-                i_reg_95 <= i_1_reg_162;
-            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_logic_0 = grp_dut_cnn_xcel_fu_106_ap_done)))) then 
-                i_reg_95 <= ap_const_lv10_0;
+                i_reg_107 <= i_1_reg_186;
+            elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_logic_0 = grp_dut_cnn_xcel_fu_118_ap_done)))) then 
+                i_reg_107 <= ap_const_lv10_0;
             end if; 
         end if;
     end process;
@@ -195,7 +195,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then
-                i_1_reg_162 <= i_1_fu_138_p2;
+                i_1_reg_186 <= i_1_fu_162_p2;
             end if;
         end if;
     end process;
@@ -203,7 +203,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and not((strm_in_V_V_empty_n = ap_const_logic_0)))) then
-                p_Result_s_reg_154 <= p_Result_s_fu_124_p3;
+                p_Result_s_reg_178 <= p_Result_s_fu_148_p3;
             end if;
         end if;
     end process;
@@ -211,12 +211,12 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not(ap_sig_59))) then
-                tmp_V_2_reg_149 <= strm_in_V_V_dout;
+                tmp_V_2_reg_173 <= strm_in_V_V_dout;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, strm_in_V_V_empty_n, strm_out_V_V_full_n, ap_sig_59, exitcond_fu_132_p2, grp_dut_cnn_xcel_fu_106_ap_done)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, strm_in_V_V_empty_n, strm_out_V_V_full_n, ap_sig_59, exitcond_fu_156_p2, grp_dut_cnn_xcel_fu_118_ap_done)
     begin
         case ap_CS_fsm is
             when ap_ST_st1_fsm_0 => 
@@ -232,13 +232,13 @@ begin
                     ap_NS_fsm <= ap_ST_st2_fsm_1;
                 end if;
             when ap_ST_st3_fsm_2 => 
-                if (not((ap_const_logic_0 = grp_dut_cnn_xcel_fu_106_ap_done))) then
+                if (not((ap_const_logic_0 = grp_dut_cnn_xcel_fu_118_ap_done))) then
                     ap_NS_fsm <= ap_ST_st4_fsm_3;
                 else
                     ap_NS_fsm <= ap_ST_st3_fsm_2;
                 end if;
             when ap_ST_st4_fsm_3 => 
-                if (not((exitcond_fu_132_p2 = ap_const_lv1_0))) then
+                if (not((exitcond_fu_156_p2 = ap_const_lv1_0))) then
                     ap_NS_fsm <= ap_ST_st1_fsm_0;
                 else
                     ap_NS_fsm <= ap_ST_st5_fsm_4;
@@ -254,9 +254,9 @@ begin
         end case;
     end process;
 
-    ap_done_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, exitcond_fu_132_p2)
+    ap_done_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, exitcond_fu_156_p2)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and not((exitcond_fu_132_p2 = ap_const_lv1_0)))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and not((exitcond_fu_156_p2 = ap_const_lv1_0)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -274,9 +274,9 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, exitcond_fu_132_p2)
+    ap_ready_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, exitcond_fu_156_p2)
     begin
-        if (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and not((exitcond_fu_132_p2 = ap_const_lv1_0)))) then 
+        if (((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3) and not((exitcond_fu_156_p2 = ap_const_lv1_0)))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -369,29 +369,29 @@ begin
         end if; 
     end process;
 
-    exitcond_fu_132_p2 <= "1" when (i_reg_95 = ap_const_lv10_240) else "0";
-    grp_dut_cnn_xcel_fu_106_ap_start <= ap_reg_grp_dut_cnn_xcel_fu_106_ap_start;
-    i_1_fu_138_p2 <= std_logic_vector(unsigned(i_reg_95) + unsigned(ap_const_lv10_1));
-    p_Result_s_fu_124_p3 <= (tmp_44_fu_120_p1 & tmp_V_2_reg_149);
+    exitcond_fu_156_p2 <= "1" when (i_reg_107 = ap_const_lv10_240) else "0";
+    grp_dut_cnn_xcel_fu_118_ap_start <= ap_reg_grp_dut_cnn_xcel_fu_118_ap_start;
+    i_1_fu_162_p2 <= std_logic_vector(unsigned(i_reg_107) + unsigned(ap_const_lv10_1));
+    p_Result_s_fu_148_p3 <= (tmp_71_fu_144_p1 & tmp_V_2_reg_173);
 
-    result_address0_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, grp_dut_cnn_xcel_fu_106_output_V_address0, ap_sig_cseq_ST_st3_fsm_2, tmp_fu_144_p1)
+    result_address0_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, grp_dut_cnn_xcel_fu_118_output_V_address0, ap_sig_cseq_ST_st3_fsm_2, tmp_fu_168_p1)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
-            result_address0 <= tmp_fu_144_p1(10 - 1 downto 0);
+            result_address0 <= tmp_fu_168_p1(10 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            result_address0 <= grp_dut_cnn_xcel_fu_106_output_V_address0;
+            result_address0 <= grp_dut_cnn_xcel_fu_118_output_V_address0;
         else 
             result_address0 <= "XXXXXXXXXX";
         end if; 
     end process;
 
 
-    result_ce0_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, grp_dut_cnn_xcel_fu_106_output_V_ce0, ap_sig_cseq_ST_st3_fsm_2)
+    result_ce0_assign_proc : process(ap_sig_cseq_ST_st4_fsm_3, grp_dut_cnn_xcel_fu_118_output_V_ce0, ap_sig_cseq_ST_st3_fsm_2)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
             result_ce0 <= ap_const_logic_1;
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            result_ce0 <= grp_dut_cnn_xcel_fu_106_output_V_ce0;
+            result_ce0 <= grp_dut_cnn_xcel_fu_118_output_V_ce0;
         else 
             result_ce0 <= ap_const_logic_0;
         end if; 
@@ -438,6 +438,6 @@ begin
         end if; 
     end process;
 
-    tmp_44_fu_120_p1 <= strm_in_V_V_dout(17 - 1 downto 0);
-    tmp_fu_144_p1 <= std_logic_vector(resize(unsigned(i_reg_95),64));
+    tmp_71_fu_144_p1 <= strm_in_V_V_dout(17 - 1 downto 0);
+    tmp_fu_168_p1 <= std_logic_vector(resize(unsigned(i_reg_107),64));
 end behav;

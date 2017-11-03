@@ -55,7 +55,7 @@ set design_name vivado_system
 
 set run_remote_bd_flow 1
 if { $run_remote_bd_flow == 1 } {
-  set str_bd_folder /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials
+  set str_bd_folder /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials
   set str_bd_filepath ${str_bd_folder}/${design_name}/${design_name}.bd
 
   # Check if remote design exists on disk

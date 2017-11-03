@@ -15,13 +15,13 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
-set_property parent.project_path /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
+set_property webtalk.parent_dir /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
+set_property parent.project_path /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
-read_ip -quiet /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci
-set_property is_locked true [get_files /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci]
+set_property ip_repo_paths /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
+read_ip -quiet /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci
+set_property is_locked true [get_files /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci]
 
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
@@ -38,44 +38,44 @@ write_checkpoint -force -noxdef vga_fifo.dcp
 catch { report_utilization -file vga_fifo_utilization_synth.rpt -pb vga_fifo_utilization_synth.pb }
 
 if { [catch {
-  file copy -force /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
+  file copy -force /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.dcp /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.v
+  write_verilog -force -mode synth_stub /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_sim_netlist.v
+  write_verilog -force -mode funcsim /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-if {[file isdir /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo]} {
+if {[file isdir /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo]} {
   catch { 
-    file copy -force /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.v /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo
+    file copy -force /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.v /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo
   }
 }
 
-if {[file isdir /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo]} {
+if {[file isdir /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo]} {
   catch { 
-    file copy -force /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.vhdl /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo
+    file copy -force /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_stub.vhdl /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.ip_user_files/ip/vga_fifo
   }
 }

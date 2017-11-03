@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_cnn_xcel'" level="0">
-<item name = "Date">Wed Nov  1 17:41:43 2017
+<item name = "Date">Fri Nov  3 17:32:40 2017
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">cnn.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.64, 1.25</column>
+<column name="ap_clk">10.00, 8.55, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">117950, 117950, 117950, 117950, none</column>
+<column name="">108143, 108143, 108143, 108143, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_dut_perform_conv_1_fu_174">dut_perform_conv_1, 105073, 105073, 105073, 105073, none</column>
-<column name="grp_dut_perform_conv_fu_187">dut_perform_conv, 7639, 7639, 7639, 7639, none</column>
+<column name="grp_dut_perform_conv_fu_221">dut_perform_conv, 7629, 7629, 7629, 7629, none</column>
+<column name="grp_dut_perform_conv_1_fu_246">dut_perform_conv_1, 95276, 95276, 95276, 95276, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,23 +51,24 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 180</column>
+<column name="Expression">-, -, 0, 74</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">77, 79, 4140, 5768</column>
-<column name="Memory">7, -, 0, 0</column>
-<column name="Multiplexer">-, -, -, 114</column>
-<column name="Register">-, -, 127, -</column>
+<column name="Instance">121, 74, 3726, 5082</column>
+<column name="Memory">10, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 206</column>
+<column name="Register">-, -, 107, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">30, 35, 4, 11</specialColumn>
+<specialColumn name="Utilization (%)">46, 33, 3, 10</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_dut_perform_conv_fu_187">dut_perform_conv, 16, 41, 1715, 2395</column>
-<column name="grp_dut_perform_conv_1_fu_174">dut_perform_conv_1, 61, 38, 2085, 2819</column>
-<column name="dut_sitofp_32ns_32_6_U45">dut_sitofp_32ns_32_6, 0, 0, 340, 554</column>
+<column name="dut_mux_4to1_sel2_32_1_U61">dut_mux_4to1_sel2_32_1, 0, 0, 0, 32</column>
+<column name="grp_dut_perform_conv_fu_221">dut_perform_conv, 60, 38, 1891, 2306</column>
+<column name="grp_dut_perform_conv_1_fu_246">dut_perform_conv_1, 61, 36, 1495, 2190</column>
+<column name="dut_sitofp_32ns_32_6_U60">dut_sitofp_32ns_32_6, 0, 0, 340, 554</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -77,9 +78,9 @@
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
 <column name="mem_conv1_0_V_U">dut_cnn_xcel_mem_conv1_0_V, 2, 0, 0, 200, 32, 1, 6400</column>
-<column name="mem_conv1_1_V_U">dut_cnn_xcel_mem_conv1_1_V, 1, 0, 0, 200, 32, 1, 6400</column>
-<column name="mem_conv1_2_V_U">dut_cnn_xcel_mem_conv1_1_V, 1, 0, 0, 200, 32, 1, 6400</column>
-<column name="mem_conv1_3_V_U">dut_cnn_xcel_mem_conv1_1_V, 1, 0, 0, 200, 32, 1, 6400</column>
+<column name="mem_conv1_1_V_U">dut_cnn_xcel_mem_conv1_0_V, 2, 0, 0, 200, 32, 1, 6400</column>
+<column name="mem_conv1_2_V_U">dut_cnn_xcel_mem_conv1_0_V, 2, 0, 0, 200, 32, 1, 6400</column>
+<column name="mem_conv1_3_V_U">dut_cnn_xcel_mem_conv1_0_V, 2, 0, 0, 200, 32, 1, 6400</column>
 <column name="mem_conv2_V_U">dut_cnn_xcel_mem_conv2_V, 2, 0, 0, 800, 32, 1, 25600</column>
 </table>
 </item>
@@ -89,58 +90,56 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="exp_V_2_fu_337_p2">+, 0, 0, 8, 8, 6</column>
-<column name="i2_off_fu_297_p2">+, 0, 0, 10, 10, 9</column>
-<column name="i_2_fu_250_p2">+, 0, 0, 10, 10, 1</column>
-<column name="i_fu_213_p2">+, 0, 0, 6, 6, 1</column>
-<column name="next_urem_fu_256_p2">+, 0, 0, 10, 10, 1</column>
-<column name="exitcond1_fu_207_p2">icmp, 0, 0, 3, 6, 5</column>
-<column name="exitcond_fu_244_p2">icmp, 0, 0, 4, 10, 10</column>
-<column name="tmp_12_fu_303_p2">icmp, 0, 0, 4, 10, 8</column>
-<column name="tmp_46_fu_262_p2">icmp, 0, 0, 4, 10, 8</column>
-<column name="tmp_6_fu_317_p2">icmp, 0, 0, 11, 32, 1</column>
-<column name="tmp_fu_283_p2">icmp, 0, 0, 4, 10, 8</column>
-<column name="idx_urem_fu_268_p3">select, 0, 0, 10, 1, 10</column>
-<column name="mem_conv1_V_load_phi_fu_309_p3">select, 0, 0, 32, 1, 32</column>
+<column name="exp_V_2_fu_391_p2">+, 0, 0, 8, 6, 8</column>
+<column name="i_2_fu_329_p2">+, 0, 0, 10, 10, 1</column>
+<column name="i_fu_272_p2">+, 0, 0, 6, 6, 1</column>
+<column name="exitcond1_fu_266_p2">icmp, 0, 0, 3, 6, 5</column>
+<column name="exitcond_fu_323_p2">icmp, 0, 0, 4, 10, 10</column>
+<column name="tmp_6_fu_371_p2">icmp, 0, 0, 11, 32, 1</column>
 <column name="output_V_d0">select, 0, 0, 32, 1, 1</column>
-<column name="sel_tmp1_fu_289_p3">select, 0, 0, 32, 1, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">6, 15, 1, 15</column>
-<column name="bvh_d_index_reg_140">6, 2, 6, 12</column>
-<column name="i2_reg_151">10, 2, 10, 20</column>
+<column name="bvh_d_index_reg_198">6, 2, 6, 12</column>
+<column name="i2_reg_209">10, 2, 10, 20</column>
 <column name="mem_conv1_0_V_address0">8, 5, 8, 40</column>
 <column name="mem_conv1_0_V_ce0">1, 4, 1, 4</column>
 <column name="mem_conv1_0_V_ce1">1, 2, 1, 2</column>
 <column name="mem_conv1_0_V_d0">32, 3, 32, 96</column>
 <column name="mem_conv1_0_V_we0">1, 3, 1, 3</column>
-<column name="mem_conv1_1_V_address0">8, 4, 8, 32</column>
+<column name="mem_conv1_1_V_address0">8, 5, 8, 40</column>
 <column name="mem_conv1_1_V_ce0">1, 4, 1, 4</column>
-<column name="mem_conv1_2_V_address0">8, 4, 8, 32</column>
+<column name="mem_conv1_1_V_ce1">1, 2, 1, 2</column>
+<column name="mem_conv1_1_V_d0">32, 3, 32, 96</column>
+<column name="mem_conv1_1_V_we0">1, 3, 1, 3</column>
+<column name="mem_conv1_2_V_address0">8, 5, 8, 40</column>
 <column name="mem_conv1_2_V_ce0">1, 4, 1, 4</column>
-<column name="mem_conv1_3_V_address0">8, 3, 8, 24</column>
-<column name="mem_conv1_3_V_ce0">1, 3, 1, 3</column>
+<column name="mem_conv1_2_V_ce1">1, 2, 1, 2</column>
+<column name="mem_conv1_2_V_d0">32, 3, 32, 96</column>
+<column name="mem_conv1_2_V_we0">1, 3, 1, 3</column>
+<column name="mem_conv1_3_V_address0">8, 5, 8, 40</column>
+<column name="mem_conv1_3_V_ce0">1, 4, 1, 4</column>
+<column name="mem_conv1_3_V_ce1">1, 2, 1, 2</column>
+<column name="mem_conv1_3_V_d0">32, 3, 32, 96</column>
+<column name="mem_conv1_3_V_we0">1, 3, 1, 3</column>
 <column name="mem_conv2_V_address0">10, 3, 10, 30</column>
 <column name="mem_conv2_V_ce0">1, 3, 1, 3</column>
 <column name="mem_conv2_V_ce1">1, 2, 1, 2</column>
-<column name="phi_urem_reg_163">10, 2, 10, 20</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">14, 0, 14, 0</column>
-<column name="ap_reg_grp_dut_perform_conv_1_fu_174_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_dut_perform_conv_fu_187_ap_start">1, 0, 1, 0</column>
-<column name="bvh_d_index_reg_140">6, 0, 6, 0</column>
-<column name="i2_reg_151">10, 0, 10, 0</column>
-<column name="i_2_reg_383">10, 0, 10, 0</column>
-<column name="idx_urem_reg_388">10, 0, 10, 0</column>
-<column name="mem_conv1_V_load_phi_reg_408">32, 0, 32, 0</column>
-<column name="p_Result_s_reg_418">32, 0, 32, 0</column>
-<column name="phi_urem_reg_163">10, 0, 10, 0</column>
-<column name="tmp_6_reg_413">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_perform_conv_1_fu_246_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_perform_conv_fu_221_ap_start">1, 0, 1, 0</column>
+<column name="bvh_d_index_reg_198">6, 0, 6, 0</column>
+<column name="i2_reg_209">10, 0, 10, 0</column>
+<column name="i_2_reg_440">10, 0, 10, 0</column>
+<column name="p_Result_s_reg_475">32, 0, 32, 0</column>
+<column name="tmp_6_reg_470">1, 0, 1, 0</column>
+<column name="tmp_reg_465">32, 0, 32, 0</column>
 </table>
 </item>
 </section>

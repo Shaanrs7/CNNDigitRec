@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Wed Nov  1 17:43:28 2017
-# Process ID: 37351
-# Current directory: /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1
+# Start of session at: Fri Nov  3 05:12:48 2017
+# Process ID: 9400
+# Current directory: /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1
 # Command line: vivado -log vga_fifo.vds -mode batch -messageDb vivado.pb -notrace -source vga_fifo.tcl
-# Log file: /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.vds
-# Journal file: /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vivado.jou
+# Log file: /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.vds
+# Journal file: /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vivado.jou
 #-----------------------------------------------------------
 source vga_fifo.tcl -notrace

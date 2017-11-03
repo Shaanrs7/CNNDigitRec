@@ -26,14 +26,16 @@ set_part {xc7z020clg484-1}
 create_clock -period 10
 
 ### You can insert your own directives here ###
-set_directive_array_partition -type block -factor 4 -dim 1 cnn_xcel mem_conv1
-#set_directive_array_partition -type block -factor 2 -dim 1 cnn_xcel mem_conv2
+set_directive_array_partition -type cyclic -factor 4 -dim 1 cnn_xcel mem_conv1
+#set_directive_array_partition -type block -factor 4 -dim 1 cnn_xcel mem_conv2
 #set_directive_array_partition cnn_xcel mem_conv2
 #set_directive_array_partition perform_conv weight
-#set_directive_array_partition perform_conv bias
+set_directive_array_partition -type cyclic -factor 4 -dim 1 cnn_xcel b_conv1
+#set_directive_array_partition -type block -factor 1 -dim 1 cnn_xcel b_conv2
 set_directive_pipeline perform_conv/LOOP1
 #set_directive_pipeline perform_conv/LOOP2
-
+#set_directive_pipeline perform_conv/LOOP3
+#set_directive_pipeline perform_conv/LOOP4
 ############################################
 
 # Simulate the C++ design

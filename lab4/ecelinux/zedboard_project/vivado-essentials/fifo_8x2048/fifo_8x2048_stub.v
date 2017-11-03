@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-// Date        : Wed Nov  1 17:47:01 2017
+// Date        : Fri Nov  3 05:14:24 2017
 // Host        : en-ec-ecelinux-01.coecis.cornell.edu running 64-bit Red Hat Enterprise Linux Server release 7.4 (Maipo)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/srs383/ECE5775/Labs/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048_stub.v
+//               /home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048_stub.v
 // Design      : fifo_8x2048
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

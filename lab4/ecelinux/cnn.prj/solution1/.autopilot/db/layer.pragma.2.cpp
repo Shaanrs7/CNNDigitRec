@@ -1,5 +1,5 @@
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp"
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp" 1
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp"
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp" 2
+# 1 "/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1/.autopilot/db/layer.pragma.1.cpp" 2
 # 1 "layer.cpp"
 # 1 "layer.cpp" 1
 # 1 "<built-in>" 1
@@ -40255,12 +40255,16 @@ void perform_conv(fixed32_t input[MAX_FMAP], fixed32_t output[MAX_FMAP], const f
   for (bit32_t i = 0; i < MAX_FMAP; i++) output[i] = 0;
 
   // perform convolution kernel
+
+//#pragma HLS dataflow
        for (bit32_t n = 0; n < N; n++) {
          for (bit32_t m = 0; m < M; m++) {
+
      for (bit32_t x = 0; x < O; x++) {
+
 LOOP1: for (bit32_t y = 0; y < O; y++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 38 "layer.cpp"
+# 42 "layer.cpp"
 
             for (bit32_t c = 0; c < K; c++) {
              for (bit32_t r = 0; r < K; r++) {
@@ -40297,8 +40301,9 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
   // add biases and perform ReLU
   bit32_t index;
   fixed32_t biased;
-LOOP2: for (bit32_t n = 0; n < N; n++) {
-    for (bit32_t x = 0; x < O; x++) {
+  for (bit32_t n = 0; n < N; n++) {
+
+LOOP2: for (bit32_t x = 0; x < O; x++) {
       for (bit32_t y = 0; y < O; y++) {
          index = x + y * O + n * ofmap_size;
          biased = output[index] + bias[n];
@@ -40340,13 +40345,14 @@ int i_index;
 // @param[out] : output - output fmaps
 
 void perform_dense (float* input, float*output, const float*weight, const float* bias, int M, int N) {
-
+float biased;
+int w_index;
   for (int n = 0; n < N; n++) {
     for (int m = 0; m < M; m++) {
-      int w_index = m + n * M;
+      w_index = m + n * M;
       output[n] += input[m] * weight[w_index];
     }
-    float biased = output[n] + bias[n];
+     biased = output[n] + bias[n];
     output[n] = (biased > 0) ? biased : 0;
   }
 

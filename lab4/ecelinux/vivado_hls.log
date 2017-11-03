@@ -5,15 +5,15 @@
   Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'srs383' on host 'en-ec-ecelinux-01.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-693.1.1.el7.x86_64) on Wed Nov 01 17:36:55 EDT 2017
+INFO: [HLS 200-10] For user 'srs383' on host 'en-ec-ecelinux-01.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-693.1.1.el7.x86_64) on Fri Nov 03 17:28:51 EDT 2017
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
-INFO: [HLS 200-10] In directory '/home/srs383/ECE5775/Labs/lab4/ecelinux'
-INFO: [HLS 200-10] Creating and opening project '/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj'.
+INFO: [HLS 200-10] In directory '/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux'
+INFO: [HLS 200-10] Opening and resetting project '/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj'.
 INFO: [HLS 200-10] Adding design file 'cnn.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'cnn_test.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'layer.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'data' to the project
-INFO: [HLS 200-10] Creating and opening solution '/home/srs383/ECE5775/Labs/lab4/ecelinux/cnn.prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/home/srs383/ECE5775/Labs/CNNDigitRec/lab4/ecelinux/cnn.prj/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -203,7 +203,7 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 #180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
 Number of test instances = 180
 Overall Error Rate = 5%
-digitrec sw         :      1 calls; 7703.013 msecs total time
+digitrec sw         :      1 calls; 4580.273 msecs total time
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [HLS 200-10] Analyzing design file 'layer.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'cnn.cpp' ... 
@@ -213,21 +213,22 @@ INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<32, 2, true, (ap_q_mode)5
 INFO: [HLS 200-10] Checking synthesizability ...
 WARNING: [SYNCHK 200-23] cnn.cpp:53: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP1' (layer.cpp:38) in function 'perform_conv' for pipelining.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1' (layer.cpp:39) in function 'perform_conv' completely.
-INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1.1' (layer.cpp:40) in function 'perform_conv' completely.
-INFO: [XFORM 203-101] Partitioning array 'mem_conv1.V' (cnn.cpp:47) in dimension 1 with a block factor 4.
-INFO: [XFORM 203-101] Partitioning array 'w_conv1'  in dimension 1 with a block factor 4.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cnn.cpp:64:13) to (cnn.cpp:63:28) in function 'cnn_xcel'... converting 7 basic blocks.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'LOOP1' (layer.cpp:42) in function 'perform_conv' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1' (layer.cpp:43) in function 'perform_conv' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1.1.1' (layer.cpp:44) in function 'perform_conv' completely.
+INFO: [XFORM 203-101] Partitioning array 'b_conv1'  in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'mem_conv1.V' (cnn.cpp:47) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'w_conv1'  in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cnn.cpp:64:13) to (cnn.cpp:63:28) in function 'cnn_xcel'... converting 3 basic blocks.
 INFO: [XFORM 203-11] Balancing expressions in function 'perform_conv.1' (layer.cpp:32:35)...6 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...6 expression(s) balanced.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:37:26) in function 'perform_conv.1'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:36:30) in function 'perform_conv.1'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:35:28) in function 'perform_conv.1'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:37:26) in function 'perform_conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:36:30) in function 'perform_conv'.
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:35:28) in function 'perform_conv'.
-INFO: [HLS 200-111] Elapsed time: 134.8 seconds; current memory usage: 231 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:40:26) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:38:30) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:37:28) in function 'perform_conv.1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (layer.cpp:40:26) in function 'perform_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:38:30) in function 'perform_conv'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (layer.cpp:37:28) in function 'perform_conv'.
+INFO: [HLS 200-111] Elapsed time: 115.03 seconds; current memory usage: 233 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
 WARNING: [SYN 201-103] Legalizing function name 'dut_perform_conv.1' to 'dut_perform_conv_1'.
@@ -236,10 +237,10 @@ INFO: [HLS 200-10] -- Scheduling module 'dut_perform_conv'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L_L_LOOP1'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_0_V_load_2', layer.cpp:41) on array 'input_0_V' due to limited memory ports.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 26.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_0_V_load_2', layer.cpp:45) on array 'input_0_V' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 14.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.58 seconds; current memory usage: 233 MB.
+INFO: [HLS 200-111] Elapsed time: 0.86 seconds; current memory usage: 236 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -248,18 +249,18 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 1.69 seconds; current memory usage: 235 MB.
+INFO: [HLS 200-111] Elapsed time: 2.15 seconds; current memory usage: 238 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_perform_conv_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L_L_LOOP1'.
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
-   between 'store' operation (layer.cpp:56) of variable 'p_Val2_5', layer.cpp:56 on array 'output_0_V' and 'load' operation ('output_0_V_load_1', layer.cpp:56) on array 'output_0_V'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_V_load_4', layer.cpp:45) on array 'input_V' due to limited memory ports.
-INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 20.
+   between 'store' operation (layer.cpp:60) of variable 'p_Val2_5', layer.cpp:60 on array 'output_0_V' and 'load' operation ('output_0_V_load_1', layer.cpp:60) on array 'output_0_V'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input_V_load_4', layer.cpp:49) on array 'input_V' due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 15.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 2.07 seconds; current memory usage: 237 MB.
+INFO: [HLS 200-111] Elapsed time: 2.67 seconds; current memory usage: 240 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_perform_conv_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -268,13 +269,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 1.81 seconds; current memory usage: 239 MB.
+INFO: [HLS 200-111] Elapsed time: 1.47 seconds; current memory usage: 242 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_cnn_xcel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 1.55 seconds; current memory usage: 239 MB.
+INFO: [HLS 200-111] Elapsed time: 1.51 seconds; current memory usage: 242 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_cnn_xcel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -283,13 +284,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.32 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-111] Elapsed time: 0.39 seconds; current memory usage: 243 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.45 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-111] Elapsed time: 0.52 seconds; current memory usage: 243 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -298,31 +299,28 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.28 seconds; current memory usage: 240 MB.
+INFO: [HLS 200-111] Elapsed time: 0.16 seconds; current memory usage: 243 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_perform_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'dut_mul_32s_30s_61_6': 9 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel32_32_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_urem_9ns_9ns_9_13': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mul_32s_32s_62_6': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel2_32_1': 19 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_perform_conv'.
-INFO: [HLS 200-111] Elapsed time: 0.4 seconds; current memory usage: 243 MB.
+INFO: [HLS 200-111] Elapsed time: 0.51 seconds; current memory usage: 247 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_perform_conv_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'dut_mul_32s_30s_61_6': 9 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_mul_mul_15ns_13ns_28_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel32_32_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_urem_13ns_9ns_13_17': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_urem_13ns_9ns_13_17_seq': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel2_32_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_perform_conv_1'.
-INFO: [HLS 200-111] Elapsed time: 1.97 seconds; current memory usage: 250 MB.
+INFO: [HLS 200-111] Elapsed time: 2.62 seconds; current memory usage: 257 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_cnn_xcel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_mux_4to1_sel2_32_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_sitofp_32ns_32_6': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_cnn_xcel'.
-INFO: [HLS 200-111] Elapsed time: 1.81 seconds; current memory usage: 257 MB.
+INFO: [HLS 200-111] Elapsed time: 1.84 seconds; current memory usage: 263 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -330,21 +328,24 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fi
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111] Elapsed time: 0.65 seconds; current memory usage: 259 MB.
-INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_9ns_9ns_9_13_div'
-INFO: [RTMG 210-282] Generating pipelined core: 'dut_mul_32s_30s_61_6_MulnS_0'
+INFO: [HLS 200-111] Elapsed time: 0.54 seconds; current memory usage: 265 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_mul_32s_32s_62_6_MulnS_0'
 INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_w_conv1_0_rom' using auto ROMs.
-INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_rom' using auto ROMs.
-INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_13ns_9ns_13_17_div'
-INFO: [RTMG 210-282] Generating pipelined core: 'dut_urem_13ns_9ns_13_17_seq_div'
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_w_conv1_1_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_w_conv1_2_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_w_conv1_3_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_0_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_1_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_2_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_b_conv1_3_rom' using distributed ROMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'dut_mul_32s_30s_61_6_MulnS_1'
 INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_1_w_conv2_rom' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'dut_perform_conv_1_b_conv2_rom' using auto ROMs.
 INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv1_0_V_ram' using block RAMs.
-INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv1_1_V_ram' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'dut_cnn_xcel_mem_conv2_V_ram' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'dut_result_ram' using block RAMs.
 INFO: [HLS 200-10] Finished generating all RTL models.
 INFO: [SYSC 207-301] Generating SystemC RTL for dut.
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 293.662 seconds; peak memory usage: 259 MB.
+INFO: [HLS 200-112] Total elapsed time: 234.658 seconds; peak memory usage: 265 MB.

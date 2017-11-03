@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity dut_mul_32s_30s_61_6_MulnS_0 is
+entity dut_mul_32s_30s_61_6_MulnS_1 is
 port (
     clk: in std_logic;
     ce: in std_logic;
@@ -18,7 +18,7 @@ port (
     p: out std_logic_vector(61 - 1 downto 0));
 end entity;
 
-architecture behav of dut_mul_32s_30s_61_6_MulnS_0 is
+architecture behav of dut_mul_32s_30s_61_6_MulnS_1 is
     signal tmp_product : std_logic_vector(61 - 1 downto 0);
     signal a_i : std_logic_vector(32 - 1 downto 0);
     signal b_i : std_logic_vector(30 - 1 downto 0);
@@ -77,7 +77,7 @@ entity dut_mul_32s_30s_61_6 is
 end entity;
 
 architecture arch of dut_mul_32s_30s_61_6 is
-    component dut_mul_32s_30s_61_6_MulnS_0 is
+    component dut_mul_32s_30s_61_6_MulnS_1 is
         port (
             clk : IN STD_LOGIC;
             ce : IN STD_LOGIC;
@@ -89,7 +89,7 @@ architecture arch of dut_mul_32s_30s_61_6 is
 
 
 begin
-    dut_mul_32s_30s_61_6_MulnS_0_U :  component dut_mul_32s_30s_61_6_MulnS_0
+    dut_mul_32s_30s_61_6_MulnS_1_U :  component dut_mul_32s_30s_61_6_MulnS_1
     port map (
         clk => clk,
         ce => ce,

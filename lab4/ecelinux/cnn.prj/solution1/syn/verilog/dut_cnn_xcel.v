@@ -44,16 +44,19 @@ parameter    ap_const_lv6_0 = 6'b000000;
 parameter    ap_const_lv10_0 = 10'b0000000000;
 parameter    ap_const_lv32_4 = 32'b100;
 parameter    ap_const_lv32_D = 32'b1101;
-parameter    ap_const_lv32_3 = 32'b11;
 parameter    ap_const_lv32_2 = 32'b10;
+parameter    ap_const_lv32_3 = 32'b11;
+parameter    ap_const_lv2_2 = 2'b10;
+parameter    ap_const_lv2_1 = 2'b1;
+parameter    ap_const_lv2_0 = 2'b00;
+parameter    ap_const_lv2_3 = 2'b11;
 parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv6_31 = 6'b110001;
 parameter    ap_const_lv6_1 = 6'b1;
 parameter    ap_const_lv30_0 = 30'b000000000000000000000000000000;
 parameter    ap_const_lv10_240 = 10'b1001000000;
 parameter    ap_const_lv10_1 = 10'b1;
-parameter    ap_const_lv10_C8 = 10'b11001000;
-parameter    ap_const_lv10_338 = 10'b1100111000;
+parameter    ap_const_lv32_9 = 32'b1001;
 parameter    ap_const_lv32_17 = 32'b10111;
 parameter    ap_const_lv32_1E = 32'b11110;
 parameter    ap_const_lv8_E2 = 8'b11100010;
@@ -79,24 +82,22 @@ reg output_V_we0;
 (* fsm_encoding = "none" *) reg   [13:0] ap_CS_fsm;
 reg    ap_sig_cseq_ST_st1_fsm_0;
 reg    ap_sig_31;
-wire   [5:0] i_fu_213_p2;
+wire   [5:0] i_fu_272_p2;
 reg    ap_sig_cseq_ST_st2_fsm_1;
 reg    ap_sig_56;
-wire   [9:0] i_2_fu_250_p2;
-reg   [9:0] i_2_reg_383;
+wire   [9:0] i_2_fu_329_p2;
+reg   [9:0] i_2_reg_440;
 reg    ap_sig_cseq_ST_st6_fsm_5;
 reg    ap_sig_65;
-wire   [9:0] idx_urem_fu_268_p3;
-reg   [9:0] idx_urem_reg_388;
-wire   [0:0] exitcond_fu_244_p2;
-wire   [31:0] mem_conv1_V_load_phi_fu_309_p3;
-reg   [31:0] mem_conv1_V_load_phi_reg_408;
+wire   [0:0] exitcond_fu_323_p2;
+wire   [31:0] tmp_fu_357_p6;
+reg   [31:0] tmp_reg_465;
 reg    ap_sig_cseq_ST_st7_fsm_6;
 reg    ap_sig_86;
-wire   [0:0] tmp_6_fu_317_p2;
-reg   [0:0] tmp_6_reg_413;
-wire   [31:0] p_Result_s_fu_343_p5;
-reg   [31:0] p_Result_s_reg_418;
+wire   [0:0] tmp_6_fu_371_p2;
+reg   [0:0] tmp_6_reg_470;
+wire   [31:0] p_Result_s_fu_397_p5;
+reg   [31:0] p_Result_s_reg_475;
 reg    ap_sig_cseq_ST_st13_fsm_12;
 reg    ap_sig_97;
 reg   [7:0] mem_conv1_0_V_address0;
@@ -108,100 +109,115 @@ reg    mem_conv1_0_V_ce1;
 wire   [31:0] mem_conv1_0_V_q1;
 reg   [7:0] mem_conv1_1_V_address0;
 reg    mem_conv1_1_V_ce0;
+reg    mem_conv1_1_V_we0;
+reg   [31:0] mem_conv1_1_V_d0;
 wire   [31:0] mem_conv1_1_V_q0;
+reg    mem_conv1_1_V_ce1;
+wire   [31:0] mem_conv1_1_V_q1;
 reg   [7:0] mem_conv1_2_V_address0;
 reg    mem_conv1_2_V_ce0;
+reg    mem_conv1_2_V_we0;
+reg   [31:0] mem_conv1_2_V_d0;
 wire   [31:0] mem_conv1_2_V_q0;
+reg    mem_conv1_2_V_ce1;
+wire   [31:0] mem_conv1_2_V_q1;
 reg   [7:0] mem_conv1_3_V_address0;
 reg    mem_conv1_3_V_ce0;
+reg    mem_conv1_3_V_we0;
+reg   [31:0] mem_conv1_3_V_d0;
 wire   [31:0] mem_conv1_3_V_q0;
+reg    mem_conv1_3_V_ce1;
+wire   [31:0] mem_conv1_3_V_q1;
 reg   [9:0] mem_conv2_V_address0;
 reg    mem_conv2_V_ce0;
 wire   [31:0] mem_conv2_V_q0;
 reg    mem_conv2_V_ce1;
 wire   [31:0] mem_conv2_V_q1;
-wire    grp_dut_perform_conv_1_fu_174_ap_start;
-wire    grp_dut_perform_conv_1_fu_174_ap_done;
-wire    grp_dut_perform_conv_1_fu_174_ap_idle;
-wire    grp_dut_perform_conv_1_fu_174_ap_ready;
-wire   [9:0] grp_dut_perform_conv_1_fu_174_input_V_address0;
-wire    grp_dut_perform_conv_1_fu_174_input_V_ce0;
-wire   [9:0] grp_dut_perform_conv_1_fu_174_input_V_address1;
-wire    grp_dut_perform_conv_1_fu_174_input_V_ce1;
-wire   [7:0] grp_dut_perform_conv_1_fu_174_output_0_V_address0;
-wire    grp_dut_perform_conv_1_fu_174_output_0_V_ce0;
-wire    grp_dut_perform_conv_1_fu_174_output_0_V_we0;
-wire   [31:0] grp_dut_perform_conv_1_fu_174_output_0_V_d0;
-wire   [7:0] grp_dut_perform_conv_1_fu_174_output_1_V_address0;
-wire    grp_dut_perform_conv_1_fu_174_output_1_V_ce0;
-wire    grp_dut_perform_conv_1_fu_174_output_1_V_we0;
-wire   [31:0] grp_dut_perform_conv_1_fu_174_output_1_V_d0;
-wire   [7:0] grp_dut_perform_conv_1_fu_174_output_2_V_address0;
-wire    grp_dut_perform_conv_1_fu_174_output_2_V_ce0;
-wire    grp_dut_perform_conv_1_fu_174_output_2_V_we0;
-wire   [31:0] grp_dut_perform_conv_1_fu_174_output_2_V_d0;
-wire   [7:0] grp_dut_perform_conv_1_fu_174_output_3_V_address0;
-wire    grp_dut_perform_conv_1_fu_174_output_3_V_ce0;
-wire    grp_dut_perform_conv_1_fu_174_output_3_V_we0;
-wire   [31:0] grp_dut_perform_conv_1_fu_174_output_3_V_d0;
-wire    grp_dut_perform_conv_fu_187_ap_start;
-wire    grp_dut_perform_conv_fu_187_ap_done;
-wire    grp_dut_perform_conv_fu_187_ap_idle;
-wire    grp_dut_perform_conv_fu_187_ap_ready;
-wire   [7:0] grp_dut_perform_conv_fu_187_input_0_V_address0;
-wire    grp_dut_perform_conv_fu_187_input_0_V_ce0;
-wire   [7:0] grp_dut_perform_conv_fu_187_input_0_V_address1;
-wire    grp_dut_perform_conv_fu_187_input_0_V_ce1;
-wire   [7:0] grp_dut_perform_conv_fu_187_input_1_V_address0;
-wire    grp_dut_perform_conv_fu_187_input_1_V_ce0;
-wire   [7:0] grp_dut_perform_conv_fu_187_input_2_V_address0;
-wire    grp_dut_perform_conv_fu_187_input_2_V_ce0;
-wire   [7:0] grp_dut_perform_conv_fu_187_input_3_V_address0;
-wire    grp_dut_perform_conv_fu_187_input_3_V_ce0;
-wire   [9:0] grp_dut_perform_conv_fu_187_output_V_address0;
-wire    grp_dut_perform_conv_fu_187_output_V_ce0;
-wire    grp_dut_perform_conv_fu_187_output_V_we0;
-wire   [31:0] grp_dut_perform_conv_fu_187_output_V_d0;
-reg   [5:0] bvh_d_index_reg_140;
-wire   [0:0] exitcond1_fu_207_p2;
-reg   [9:0] i2_reg_151;
+wire    grp_dut_perform_conv_fu_221_ap_start;
+wire    grp_dut_perform_conv_fu_221_ap_done;
+wire    grp_dut_perform_conv_fu_221_ap_idle;
+wire    grp_dut_perform_conv_fu_221_ap_ready;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_0_V_address0;
+wire    grp_dut_perform_conv_fu_221_input_0_V_ce0;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_0_V_address1;
+wire    grp_dut_perform_conv_fu_221_input_0_V_ce1;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_1_V_address0;
+wire    grp_dut_perform_conv_fu_221_input_1_V_ce0;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_1_V_address1;
+wire    grp_dut_perform_conv_fu_221_input_1_V_ce1;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_2_V_address0;
+wire    grp_dut_perform_conv_fu_221_input_2_V_ce0;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_2_V_address1;
+wire    grp_dut_perform_conv_fu_221_input_2_V_ce1;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_3_V_address0;
+wire    grp_dut_perform_conv_fu_221_input_3_V_ce0;
+wire   [7:0] grp_dut_perform_conv_fu_221_input_3_V_address1;
+wire    grp_dut_perform_conv_fu_221_input_3_V_ce1;
+wire   [9:0] grp_dut_perform_conv_fu_221_output_V_address0;
+wire    grp_dut_perform_conv_fu_221_output_V_ce0;
+wire    grp_dut_perform_conv_fu_221_output_V_we0;
+wire   [31:0] grp_dut_perform_conv_fu_221_output_V_d0;
+wire    grp_dut_perform_conv_1_fu_246_ap_start;
+wire    grp_dut_perform_conv_1_fu_246_ap_done;
+wire    grp_dut_perform_conv_1_fu_246_ap_idle;
+wire    grp_dut_perform_conv_1_fu_246_ap_ready;
+wire   [9:0] grp_dut_perform_conv_1_fu_246_input_V_address0;
+wire    grp_dut_perform_conv_1_fu_246_input_V_ce0;
+wire   [9:0] grp_dut_perform_conv_1_fu_246_input_V_address1;
+wire    grp_dut_perform_conv_1_fu_246_input_V_ce1;
+wire   [7:0] grp_dut_perform_conv_1_fu_246_output_0_V_address0;
+wire    grp_dut_perform_conv_1_fu_246_output_0_V_ce0;
+wire    grp_dut_perform_conv_1_fu_246_output_0_V_we0;
+wire   [31:0] grp_dut_perform_conv_1_fu_246_output_0_V_d0;
+wire   [7:0] grp_dut_perform_conv_1_fu_246_output_1_V_address0;
+wire    grp_dut_perform_conv_1_fu_246_output_1_V_ce0;
+wire    grp_dut_perform_conv_1_fu_246_output_1_V_we0;
+wire   [31:0] grp_dut_perform_conv_1_fu_246_output_1_V_d0;
+wire   [7:0] grp_dut_perform_conv_1_fu_246_output_2_V_address0;
+wire    grp_dut_perform_conv_1_fu_246_output_2_V_ce0;
+wire    grp_dut_perform_conv_1_fu_246_output_2_V_we0;
+wire   [31:0] grp_dut_perform_conv_1_fu_246_output_2_V_d0;
+wire   [7:0] grp_dut_perform_conv_1_fu_246_output_3_V_address0;
+wire    grp_dut_perform_conv_1_fu_246_output_3_V_ce0;
+wire    grp_dut_perform_conv_1_fu_246_output_3_V_we0;
+wire   [31:0] grp_dut_perform_conv_1_fu_246_output_3_V_d0;
+reg   [5:0] bvh_d_index_reg_198;
+wire   [0:0] exitcond1_fu_266_p2;
+reg   [9:0] i2_reg_209;
 reg    ap_sig_cseq_ST_st5_fsm_4;
-reg    ap_sig_227;
+reg    ap_sig_244;
 reg    ap_sig_cseq_ST_st14_fsm_13;
-reg    ap_sig_237;
-reg   [9:0] phi_urem_reg_163;
-reg    ap_reg_grp_dut_perform_conv_1_fu_174_ap_start;
-reg    ap_sig_cseq_ST_st4_fsm_3;
-reg    ap_sig_248;
-reg    ap_reg_grp_dut_perform_conv_fu_187_ap_start;
+reg    ap_sig_254;
+reg    ap_reg_grp_dut_perform_conv_fu_221_ap_start;
 reg    ap_sig_cseq_ST_st3_fsm_2;
-reg    ap_sig_282;
-wire   [63:0] index_assign_fu_239_p1;
-wire   [63:0] newIndex3_fu_276_p1;
-wire   [63:0] tmp_5_fu_355_p1;
-wire   [31:0] tmp_4_cast_fu_234_p1;
+reg    ap_sig_265;
+reg    ap_reg_grp_dut_perform_conv_1_fu_246_ap_start;
+reg    ap_sig_cseq_ST_st4_fsm_3;
+reg    ap_sig_366;
+wire   [63:0] newIndex26_fu_315_p1;
+wire   [63:0] newIndex3_fu_345_p1;
+wire   [63:0] tmp_5_fu_409_p1;
+wire   [1:0] tmp_73_fu_301_p1;
+wire   [31:0] tmp_4_cast_fu_293_p1;
 reg    ap_sig_cseq_ST_st8_fsm_7;
-reg    ap_sig_323;
-wire   [31:0] index_assign_2_cast6_fu_203_p1;
-wire   [0:0] tmp_45_fu_219_p3;
-wire   [30:0] tmp_s_fu_226_p3;
-wire   [9:0] next_urem_fu_256_p2;
-wire   [0:0] tmp_46_fu_262_p2;
-wire   [0:0] tmp_fu_283_p2;
-wire   [9:0] i2_off_fu_297_p2;
-wire   [0:0] tmp_12_fu_303_p2;
-wire   [31:0] sel_tmp1_fu_289_p3;
-wire   [31:0] grp_fu_200_p1;
-wire   [31:0] res_V_1_fu_323_p1;
-wire   [7:0] exp_V_fu_327_p4;
-wire   [7:0] exp_V_2_fu_337_p2;
+reg    ap_sig_433;
+wire   [31:0] index_assign_cast2_fu_262_p1;
+wire   [0:0] tmp_72_fu_278_p3;
+wire   [30:0] tmp_s_fu_285_p3;
+wire   [3:0] newIndex8_fu_305_p4;
+wire   [7:0] newIndex_fu_335_p4;
+wire   [1:0] tmp_fu_357_p5;
+wire   [31:0] grp_fu_259_p1;
+wire   [31:0] res_V_1_fu_377_p1;
+wire   [7:0] exp_V_fu_381_p4;
+wire   [7:0] exp_V_2_fu_391_p2;
 reg   [13:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 14'b1;
-#0 ap_reg_grp_dut_perform_conv_1_fu_174_ap_start = 1'b0;
-#0 ap_reg_grp_dut_perform_conv_fu_187_ap_start = 1'b0;
+#0 ap_reg_grp_dut_perform_conv_fu_221_ap_start = 1'b0;
+#0 ap_reg_grp_dut_perform_conv_1_fu_246_ap_start = 1'b0;
 end
 
 dut_cnn_xcel_mem_conv1_0_V #(
@@ -216,12 +232,12 @@ mem_conv1_0_V_U(
     .we0(mem_conv1_0_V_we0),
     .d0(mem_conv1_0_V_d0),
     .q0(mem_conv1_0_V_q0),
-    .address1(grp_dut_perform_conv_fu_187_input_0_V_address1),
+    .address1(grp_dut_perform_conv_fu_221_input_0_V_address1),
     .ce1(mem_conv1_0_V_ce1),
     .q1(mem_conv1_0_V_q1)
 );
 
-dut_cnn_xcel_mem_conv1_1_V #(
+dut_cnn_xcel_mem_conv1_0_V #(
     .DataWidth( 32 ),
     .AddressRange( 200 ),
     .AddressWidth( 8 ))
@@ -230,12 +246,15 @@ mem_conv1_1_V_U(
     .reset(ap_rst),
     .address0(mem_conv1_1_V_address0),
     .ce0(mem_conv1_1_V_ce0),
-    .we0(grp_dut_perform_conv_1_fu_174_output_1_V_we0),
-    .d0(grp_dut_perform_conv_1_fu_174_output_1_V_d0),
-    .q0(mem_conv1_1_V_q0)
+    .we0(mem_conv1_1_V_we0),
+    .d0(mem_conv1_1_V_d0),
+    .q0(mem_conv1_1_V_q0),
+    .address1(grp_dut_perform_conv_fu_221_input_1_V_address1),
+    .ce1(mem_conv1_1_V_ce1),
+    .q1(mem_conv1_1_V_q1)
 );
 
-dut_cnn_xcel_mem_conv1_1_V #(
+dut_cnn_xcel_mem_conv1_0_V #(
     .DataWidth( 32 ),
     .AddressRange( 200 ),
     .AddressWidth( 8 ))
@@ -244,12 +263,15 @@ mem_conv1_2_V_U(
     .reset(ap_rst),
     .address0(mem_conv1_2_V_address0),
     .ce0(mem_conv1_2_V_ce0),
-    .we0(grp_dut_perform_conv_1_fu_174_output_2_V_we0),
-    .d0(grp_dut_perform_conv_1_fu_174_output_2_V_d0),
-    .q0(mem_conv1_2_V_q0)
+    .we0(mem_conv1_2_V_we0),
+    .d0(mem_conv1_2_V_d0),
+    .q0(mem_conv1_2_V_q0),
+    .address1(grp_dut_perform_conv_fu_221_input_2_V_address1),
+    .ce1(mem_conv1_2_V_ce1),
+    .q1(mem_conv1_2_V_q1)
 );
 
-dut_cnn_xcel_mem_conv1_1_V #(
+dut_cnn_xcel_mem_conv1_0_V #(
     .DataWidth( 32 ),
     .AddressRange( 200 ),
     .AddressWidth( 8 ))
@@ -258,9 +280,12 @@ mem_conv1_3_V_U(
     .reset(ap_rst),
     .address0(mem_conv1_3_V_address0),
     .ce0(mem_conv1_3_V_ce0),
-    .we0(grp_dut_perform_conv_1_fu_174_output_3_V_we0),
-    .d0(grp_dut_perform_conv_1_fu_174_output_3_V_d0),
-    .q0(mem_conv1_3_V_q0)
+    .we0(mem_conv1_3_V_we0),
+    .d0(mem_conv1_3_V_d0),
+    .q0(mem_conv1_3_V_q0),
+    .address1(grp_dut_perform_conv_fu_221_input_3_V_address1),
+    .ce1(mem_conv1_3_V_ce1),
+    .q1(mem_conv1_3_V_q1)
 );
 
 dut_cnn_xcel_mem_conv2_V #(
@@ -272,76 +297,85 @@ mem_conv2_V_U(
     .reset(ap_rst),
     .address0(mem_conv2_V_address0),
     .ce0(mem_conv2_V_ce0),
-    .we0(grp_dut_perform_conv_fu_187_output_V_we0),
-    .d0(grp_dut_perform_conv_fu_187_output_V_d0),
+    .we0(grp_dut_perform_conv_fu_221_output_V_we0),
+    .d0(grp_dut_perform_conv_fu_221_output_V_d0),
     .q0(mem_conv2_V_q0),
-    .address1(grp_dut_perform_conv_1_fu_174_input_V_address1),
+    .address1(grp_dut_perform_conv_1_fu_246_input_V_address1),
     .ce1(mem_conv2_V_ce1),
     .q1(mem_conv2_V_q1)
 );
 
-dut_perform_conv_1 grp_dut_perform_conv_1_fu_174(
+dut_perform_conv grp_dut_perform_conv_fu_221(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_dut_perform_conv_1_fu_174_ap_start),
-    .ap_done(grp_dut_perform_conv_1_fu_174_ap_done),
-    .ap_idle(grp_dut_perform_conv_1_fu_174_ap_idle),
-    .ap_ready(grp_dut_perform_conv_1_fu_174_ap_ready),
-    .input_V_address0(grp_dut_perform_conv_1_fu_174_input_V_address0),
-    .input_V_ce0(grp_dut_perform_conv_1_fu_174_input_V_ce0),
-    .input_V_q0(mem_conv2_V_q0),
-    .input_V_address1(grp_dut_perform_conv_1_fu_174_input_V_address1),
-    .input_V_ce1(grp_dut_perform_conv_1_fu_174_input_V_ce1),
-    .input_V_q1(mem_conv2_V_q1),
-    .output_0_V_address0(grp_dut_perform_conv_1_fu_174_output_0_V_address0),
-    .output_0_V_ce0(grp_dut_perform_conv_1_fu_174_output_0_V_ce0),
-    .output_0_V_we0(grp_dut_perform_conv_1_fu_174_output_0_V_we0),
-    .output_0_V_d0(grp_dut_perform_conv_1_fu_174_output_0_V_d0),
-    .output_0_V_q0(mem_conv1_0_V_q0),
-    .output_1_V_address0(grp_dut_perform_conv_1_fu_174_output_1_V_address0),
-    .output_1_V_ce0(grp_dut_perform_conv_1_fu_174_output_1_V_ce0),
-    .output_1_V_we0(grp_dut_perform_conv_1_fu_174_output_1_V_we0),
-    .output_1_V_d0(grp_dut_perform_conv_1_fu_174_output_1_V_d0),
-    .output_1_V_q0(mem_conv1_1_V_q0),
-    .output_2_V_address0(grp_dut_perform_conv_1_fu_174_output_2_V_address0),
-    .output_2_V_ce0(grp_dut_perform_conv_1_fu_174_output_2_V_ce0),
-    .output_2_V_we0(grp_dut_perform_conv_1_fu_174_output_2_V_we0),
-    .output_2_V_d0(grp_dut_perform_conv_1_fu_174_output_2_V_d0),
-    .output_2_V_q0(mem_conv1_2_V_q0),
-    .output_3_V_address0(grp_dut_perform_conv_1_fu_174_output_3_V_address0),
-    .output_3_V_ce0(grp_dut_perform_conv_1_fu_174_output_3_V_ce0),
-    .output_3_V_we0(grp_dut_perform_conv_1_fu_174_output_3_V_we0),
-    .output_3_V_d0(grp_dut_perform_conv_1_fu_174_output_3_V_d0),
-    .output_3_V_q0(mem_conv1_3_V_q0)
+    .ap_start(grp_dut_perform_conv_fu_221_ap_start),
+    .ap_done(grp_dut_perform_conv_fu_221_ap_done),
+    .ap_idle(grp_dut_perform_conv_fu_221_ap_idle),
+    .ap_ready(grp_dut_perform_conv_fu_221_ap_ready),
+    .input_0_V_address0(grp_dut_perform_conv_fu_221_input_0_V_address0),
+    .input_0_V_ce0(grp_dut_perform_conv_fu_221_input_0_V_ce0),
+    .input_0_V_q0(mem_conv1_0_V_q0),
+    .input_0_V_address1(grp_dut_perform_conv_fu_221_input_0_V_address1),
+    .input_0_V_ce1(grp_dut_perform_conv_fu_221_input_0_V_ce1),
+    .input_0_V_q1(mem_conv1_0_V_q1),
+    .input_1_V_address0(grp_dut_perform_conv_fu_221_input_1_V_address0),
+    .input_1_V_ce0(grp_dut_perform_conv_fu_221_input_1_V_ce0),
+    .input_1_V_q0(mem_conv1_1_V_q0),
+    .input_1_V_address1(grp_dut_perform_conv_fu_221_input_1_V_address1),
+    .input_1_V_ce1(grp_dut_perform_conv_fu_221_input_1_V_ce1),
+    .input_1_V_q1(mem_conv1_1_V_q1),
+    .input_2_V_address0(grp_dut_perform_conv_fu_221_input_2_V_address0),
+    .input_2_V_ce0(grp_dut_perform_conv_fu_221_input_2_V_ce0),
+    .input_2_V_q0(mem_conv1_2_V_q0),
+    .input_2_V_address1(grp_dut_perform_conv_fu_221_input_2_V_address1),
+    .input_2_V_ce1(grp_dut_perform_conv_fu_221_input_2_V_ce1),
+    .input_2_V_q1(mem_conv1_2_V_q1),
+    .input_3_V_address0(grp_dut_perform_conv_fu_221_input_3_V_address0),
+    .input_3_V_ce0(grp_dut_perform_conv_fu_221_input_3_V_ce0),
+    .input_3_V_q0(mem_conv1_3_V_q0),
+    .input_3_V_address1(grp_dut_perform_conv_fu_221_input_3_V_address1),
+    .input_3_V_ce1(grp_dut_perform_conv_fu_221_input_3_V_ce1),
+    .input_3_V_q1(mem_conv1_3_V_q1),
+    .output_V_address0(grp_dut_perform_conv_fu_221_output_V_address0),
+    .output_V_ce0(grp_dut_perform_conv_fu_221_output_V_ce0),
+    .output_V_we0(grp_dut_perform_conv_fu_221_output_V_we0),
+    .output_V_d0(grp_dut_perform_conv_fu_221_output_V_d0),
+    .output_V_q0(mem_conv2_V_q0)
 );
 
-dut_perform_conv grp_dut_perform_conv_fu_187(
+dut_perform_conv_1 grp_dut_perform_conv_1_fu_246(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_dut_perform_conv_fu_187_ap_start),
-    .ap_done(grp_dut_perform_conv_fu_187_ap_done),
-    .ap_idle(grp_dut_perform_conv_fu_187_ap_idle),
-    .ap_ready(grp_dut_perform_conv_fu_187_ap_ready),
-    .input_0_V_address0(grp_dut_perform_conv_fu_187_input_0_V_address0),
-    .input_0_V_ce0(grp_dut_perform_conv_fu_187_input_0_V_ce0),
-    .input_0_V_q0(mem_conv1_0_V_q0),
-    .input_0_V_address1(grp_dut_perform_conv_fu_187_input_0_V_address1),
-    .input_0_V_ce1(grp_dut_perform_conv_fu_187_input_0_V_ce1),
-    .input_0_V_q1(mem_conv1_0_V_q1),
-    .input_1_V_address0(grp_dut_perform_conv_fu_187_input_1_V_address0),
-    .input_1_V_ce0(grp_dut_perform_conv_fu_187_input_1_V_ce0),
-    .input_1_V_q0(mem_conv1_1_V_q0),
-    .input_2_V_address0(grp_dut_perform_conv_fu_187_input_2_V_address0),
-    .input_2_V_ce0(grp_dut_perform_conv_fu_187_input_2_V_ce0),
-    .input_2_V_q0(mem_conv1_2_V_q0),
-    .input_3_V_address0(grp_dut_perform_conv_fu_187_input_3_V_address0),
-    .input_3_V_ce0(grp_dut_perform_conv_fu_187_input_3_V_ce0),
-    .input_3_V_q0(mem_conv1_3_V_q0),
-    .output_V_address0(grp_dut_perform_conv_fu_187_output_V_address0),
-    .output_V_ce0(grp_dut_perform_conv_fu_187_output_V_ce0),
-    .output_V_we0(grp_dut_perform_conv_fu_187_output_V_we0),
-    .output_V_d0(grp_dut_perform_conv_fu_187_output_V_d0),
-    .output_V_q0(mem_conv2_V_q0)
+    .ap_start(grp_dut_perform_conv_1_fu_246_ap_start),
+    .ap_done(grp_dut_perform_conv_1_fu_246_ap_done),
+    .ap_idle(grp_dut_perform_conv_1_fu_246_ap_idle),
+    .ap_ready(grp_dut_perform_conv_1_fu_246_ap_ready),
+    .input_V_address0(grp_dut_perform_conv_1_fu_246_input_V_address0),
+    .input_V_ce0(grp_dut_perform_conv_1_fu_246_input_V_ce0),
+    .input_V_q0(mem_conv2_V_q0),
+    .input_V_address1(grp_dut_perform_conv_1_fu_246_input_V_address1),
+    .input_V_ce1(grp_dut_perform_conv_1_fu_246_input_V_ce1),
+    .input_V_q1(mem_conv2_V_q1),
+    .output_0_V_address0(grp_dut_perform_conv_1_fu_246_output_0_V_address0),
+    .output_0_V_ce0(grp_dut_perform_conv_1_fu_246_output_0_V_ce0),
+    .output_0_V_we0(grp_dut_perform_conv_1_fu_246_output_0_V_we0),
+    .output_0_V_d0(grp_dut_perform_conv_1_fu_246_output_0_V_d0),
+    .output_0_V_q0(mem_conv1_0_V_q0),
+    .output_1_V_address0(grp_dut_perform_conv_1_fu_246_output_1_V_address0),
+    .output_1_V_ce0(grp_dut_perform_conv_1_fu_246_output_1_V_ce0),
+    .output_1_V_we0(grp_dut_perform_conv_1_fu_246_output_1_V_we0),
+    .output_1_V_d0(grp_dut_perform_conv_1_fu_246_output_1_V_d0),
+    .output_1_V_q0(mem_conv1_1_V_q0),
+    .output_2_V_address0(grp_dut_perform_conv_1_fu_246_output_2_V_address0),
+    .output_2_V_ce0(grp_dut_perform_conv_1_fu_246_output_2_V_ce0),
+    .output_2_V_we0(grp_dut_perform_conv_1_fu_246_output_2_V_we0),
+    .output_2_V_d0(grp_dut_perform_conv_1_fu_246_output_2_V_d0),
+    .output_2_V_q0(mem_conv1_2_V_q0),
+    .output_3_V_address0(grp_dut_perform_conv_1_fu_246_output_3_V_address0),
+    .output_3_V_ce0(grp_dut_perform_conv_1_fu_246_output_3_V_ce0),
+    .output_3_V_we0(grp_dut_perform_conv_1_fu_246_output_3_V_we0),
+    .output_3_V_d0(grp_dut_perform_conv_1_fu_246_output_3_V_d0),
+    .output_3_V_q0(mem_conv1_3_V_q0)
 );
 
 dut_sitofp_32ns_32_6 #(
@@ -349,12 +383,30 @@ dut_sitofp_32ns_32_6 #(
     .NUM_STAGE( 6 ),
     .din0_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-dut_sitofp_32ns_32_6_U45(
+dut_sitofp_32ns_32_6_U60(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(mem_conv1_V_load_phi_reg_408),
+    .din0(tmp_reg_465),
     .ce(1'b1),
-    .dout(grp_fu_200_p1)
+    .dout(grp_fu_259_p1)
+);
+
+dut_mux_4to1_sel2_32_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din1_WIDTH( 32 ),
+    .din2_WIDTH( 32 ),
+    .din3_WIDTH( 32 ),
+    .din4_WIDTH( 32 ),
+    .din5_WIDTH( 2 ),
+    .dout_WIDTH( 32 ))
+dut_mux_4to1_sel2_32_1_U61(
+    .din1(mem_conv1_0_V_q0),
+    .din2(mem_conv1_1_V_q0),
+    .din3(mem_conv1_2_V_q0),
+    .din4(mem_conv1_3_V_q0),
+    .din5(tmp_fu_357_p5),
+    .dout(tmp_fu_357_p6)
 );
 
 always @ (posedge ap_clk) begin
@@ -367,79 +419,65 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_reg_grp_dut_perform_conv_1_fu_174_ap_start <= 1'b0;
+        ap_reg_grp_dut_perform_conv_1_fu_246_ap_start <= 1'b0;
     end else begin
         if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-            ap_reg_grp_dut_perform_conv_1_fu_174_ap_start <= 1'b1;
-        end else if ((1'b1 == grp_dut_perform_conv_1_fu_174_ap_ready)) begin
-            ap_reg_grp_dut_perform_conv_1_fu_174_ap_start <= 1'b0;
+            ap_reg_grp_dut_perform_conv_1_fu_246_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_dut_perform_conv_1_fu_246_ap_ready)) begin
+            ap_reg_grp_dut_perform_conv_1_fu_246_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_reg_grp_dut_perform_conv_fu_187_ap_start <= 1'b0;
+        ap_reg_grp_dut_perform_conv_fu_221_ap_start <= 1'b0;
     end else begin
-        if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & ~(1'b0 == exitcond1_fu_207_p2))) begin
-            ap_reg_grp_dut_perform_conv_fu_187_ap_start <= 1'b1;
-        end else if ((1'b1 == grp_dut_perform_conv_fu_187_ap_ready)) begin
-            ap_reg_grp_dut_perform_conv_fu_187_ap_start <= 1'b0;
+        if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & ~(1'b0 == exitcond1_fu_266_p2))) begin
+            ap_reg_grp_dut_perform_conv_fu_221_ap_start <= 1'b1;
+        end else if ((1'b1 == grp_dut_perform_conv_fu_221_ap_ready)) begin
+            ap_reg_grp_dut_perform_conv_fu_221_ap_start <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_207_p2))) begin
-        bvh_d_index_reg_140 <= i_fu_213_p2;
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2))) begin
+        bvh_d_index_reg_198 <= i_fu_272_p2;
     end else if (((1'b1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == 1'b0))) begin
-        bvh_d_index_reg_140 <= ap_const_lv6_0;
+        bvh_d_index_reg_198 <= ap_const_lv6_0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_sig_cseq_ST_st14_fsm_13)) begin
-        i2_reg_151 <= i_2_reg_383;
-    end else if (((1'b1 == ap_sig_cseq_ST_st5_fsm_4) & ~(1'b0 == grp_dut_perform_conv_1_fu_174_ap_done))) begin
-        i2_reg_151 <= ap_const_lv10_0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_sig_cseq_ST_st14_fsm_13)) begin
-        phi_urem_reg_163 <= idx_urem_reg_388;
-    end else if (((1'b1 == ap_sig_cseq_ST_st5_fsm_4) & ~(1'b0 == grp_dut_perform_conv_1_fu_174_ap_done))) begin
-        phi_urem_reg_163 <= ap_const_lv10_0;
+        i2_reg_209 <= i_2_reg_440;
+    end else if (((1'b1 == ap_sig_cseq_ST_st5_fsm_4) & ~(1'b0 == grp_dut_perform_conv_1_fu_246_ap_done))) begin
+        i2_reg_209 <= ap_const_lv10_0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
-        i_2_reg_383 <= i_2_fu_250_p2;
+        i_2_reg_440 <= i_2_fu_329_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) & (exitcond_fu_244_p2 == 1'b0))) begin
-        idx_urem_reg_388 <= idx_urem_fu_268_p3;
+    if (((1'b1 == ap_sig_cseq_ST_st13_fsm_12) & (1'b0 == tmp_6_reg_470))) begin
+        p_Result_s_reg_475 <= p_Result_s_fu_397_p5;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_sig_cseq_ST_st7_fsm_6)) begin
-        mem_conv1_V_load_phi_reg_408 <= mem_conv1_V_load_phi_fu_309_p3;
-        tmp_6_reg_413 <= tmp_6_fu_317_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_sig_cseq_ST_st13_fsm_12) & (1'b0 == tmp_6_reg_413))) begin
-        p_Result_s_reg_418 <= p_Result_s_fu_343_p5;
+        tmp_6_reg_470 <= tmp_6_fu_371_p2;
+        tmp_reg_465 <= tmp_fu_357_p6;
     end
 end
 
 always @ (*) begin
-    if ((((1'b0 == ap_start) & (1'b1 == ap_sig_cseq_ST_st1_fsm_0)) | ((1'b1 == ap_sig_cseq_ST_st6_fsm_5) & ~(exitcond_fu_244_p2 == 1'b0)))) begin
+    if ((((1'b0 == ap_start) & (1'b1 == ap_sig_cseq_ST_st1_fsm_0)) | ((1'b1 == ap_sig_cseq_ST_st6_fsm_5) & ~(exitcond_fu_323_p2 == 1'b0)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -455,7 +493,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) & ~(exitcond_fu_244_p2 == 1'b0))) begin
+    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) & ~(exitcond_fu_323_p2 == 1'b0))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -471,7 +509,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_237) begin
+    if (ap_sig_254) begin
         ap_sig_cseq_ST_st14_fsm_13 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st14_fsm_13 = 1'b0;
@@ -495,7 +533,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_282) begin
+    if (ap_sig_265) begin
         ap_sig_cseq_ST_st3_fsm_2 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st3_fsm_2 = 1'b0;
@@ -503,7 +541,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_248) begin
+    if (ap_sig_366) begin
         ap_sig_cseq_ST_st4_fsm_3 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st4_fsm_3 = 1'b0;
@@ -511,7 +549,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_227) begin
+    if (ap_sig_244) begin
         ap_sig_cseq_ST_st5_fsm_4 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st5_fsm_4 = 1'b0;
@@ -535,7 +573,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (ap_sig_323) begin
+    if (ap_sig_433) begin
         ap_sig_cseq_ST_st8_fsm_7 = 1'b1;
     end else begin
         ap_sig_cseq_ST_st8_fsm_7 = 1'b0;
@@ -543,26 +581,26 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_207_p2))) begin
-        mem_conv1_0_V_address0 = index_assign_fu_239_p1;
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_0))) begin
+        mem_conv1_0_V_address0 = newIndex26_fu_315_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
-        mem_conv1_0_V_address0 = newIndex3_fu_276_p1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_0_V_address0 = grp_dut_perform_conv_fu_187_input_0_V_address0;
+        mem_conv1_0_V_address0 = newIndex3_fu_345_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_0_V_address0 = grp_dut_perform_conv_1_fu_174_output_0_V_address0;
+        mem_conv1_0_V_address0 = grp_dut_perform_conv_1_fu_246_output_0_V_address0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_0_V_address0 = grp_dut_perform_conv_fu_221_input_0_V_address0;
     end else begin
         mem_conv1_0_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) | ((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_207_p2)))) begin
+    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) | ((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_0)))) begin
         mem_conv1_0_V_ce0 = 1'b1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_0_V_ce0 = grp_dut_perform_conv_fu_187_input_0_V_ce0;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_0_V_ce0 = grp_dut_perform_conv_1_fu_174_output_0_V_ce0;
+        mem_conv1_0_V_ce0 = grp_dut_perform_conv_1_fu_246_output_0_V_ce0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_0_V_ce0 = grp_dut_perform_conv_fu_221_input_0_V_ce0;
     end else begin
         mem_conv1_0_V_ce0 = 1'b0;
     end
@@ -570,75 +608,107 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_0_V_ce1 = grp_dut_perform_conv_fu_187_input_0_V_ce1;
+        mem_conv1_0_V_ce1 = grp_dut_perform_conv_fu_221_input_0_V_ce1;
     end else begin
         mem_conv1_0_V_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_207_p2))) begin
-        mem_conv1_0_V_d0 = tmp_4_cast_fu_234_p1;
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_0))) begin
+        mem_conv1_0_V_d0 = tmp_4_cast_fu_293_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_0_V_d0 = grp_dut_perform_conv_1_fu_174_output_0_V_d0;
+        mem_conv1_0_V_d0 = grp_dut_perform_conv_1_fu_246_output_0_V_d0;
     end else begin
         mem_conv1_0_V_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_207_p2))) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_0))) begin
         mem_conv1_0_V_we0 = 1'b1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_0_V_we0 = grp_dut_perform_conv_1_fu_174_output_0_V_we0;
+        mem_conv1_0_V_we0 = grp_dut_perform_conv_1_fu_246_output_0_V_we0;
     end else begin
         mem_conv1_0_V_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
-        mem_conv1_1_V_address0 = newIndex3_fu_276_p1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_1_V_address0 = grp_dut_perform_conv_fu_187_input_1_V_address0;
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_1))) begin
+        mem_conv1_1_V_address0 = newIndex26_fu_315_p1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
+        mem_conv1_1_V_address0 = newIndex3_fu_345_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_1_V_address0 = grp_dut_perform_conv_1_fu_174_output_1_V_address0;
+        mem_conv1_1_V_address0 = grp_dut_perform_conv_1_fu_246_output_1_V_address0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_1_V_address0 = grp_dut_perform_conv_fu_221_input_1_V_address0;
     end else begin
         mem_conv1_1_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) | ((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_1)))) begin
         mem_conv1_1_V_ce0 = 1'b1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_1_V_ce0 = grp_dut_perform_conv_fu_187_input_1_V_ce0;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_1_V_ce0 = grp_dut_perform_conv_1_fu_174_output_1_V_ce0;
+        mem_conv1_1_V_ce0 = grp_dut_perform_conv_1_fu_246_output_1_V_ce0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_1_V_ce0 = grp_dut_perform_conv_fu_221_input_1_V_ce0;
     end else begin
         mem_conv1_1_V_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
-        mem_conv1_2_V_address0 = newIndex3_fu_276_p1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_2_V_address0 = grp_dut_perform_conv_fu_187_input_2_V_address0;
+    if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_1_V_ce1 = grp_dut_perform_conv_fu_221_input_1_V_ce1;
+    end else begin
+        mem_conv1_1_V_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_1))) begin
+        mem_conv1_1_V_d0 = tmp_4_cast_fu_293_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_2_V_address0 = grp_dut_perform_conv_1_fu_174_output_2_V_address0;
+        mem_conv1_1_V_d0 = grp_dut_perform_conv_1_fu_246_output_1_V_d0;
+    end else begin
+        mem_conv1_1_V_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_1))) begin
+        mem_conv1_1_V_we0 = 1'b1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv1_1_V_we0 = grp_dut_perform_conv_1_fu_246_output_1_V_we0;
+    end else begin
+        mem_conv1_1_V_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_2))) begin
+        mem_conv1_2_V_address0 = newIndex26_fu_315_p1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
+        mem_conv1_2_V_address0 = newIndex3_fu_345_p1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv1_2_V_address0 = grp_dut_perform_conv_1_fu_246_output_2_V_address0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_2_V_address0 = grp_dut_perform_conv_fu_221_input_2_V_address0;
     end else begin
         mem_conv1_2_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
+    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) | ((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_2)))) begin
         mem_conv1_2_V_ce0 = 1'b1;
-    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_2_V_ce0 = grp_dut_perform_conv_fu_187_input_2_V_ce0;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_2_V_ce0 = grp_dut_perform_conv_1_fu_174_output_2_V_ce0;
+        mem_conv1_2_V_ce0 = grp_dut_perform_conv_1_fu_246_output_2_V_ce0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_2_V_ce0 = grp_dut_perform_conv_fu_221_input_2_V_ce0;
     end else begin
         mem_conv1_2_V_ce0 = 1'b0;
     end
@@ -646,19 +716,53 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_3_V_address0 = grp_dut_perform_conv_fu_187_input_3_V_address0;
+        mem_conv1_2_V_ce1 = grp_dut_perform_conv_fu_221_input_2_V_ce1;
+    end else begin
+        mem_conv1_2_V_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_2))) begin
+        mem_conv1_2_V_d0 = tmp_4_cast_fu_293_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_3_V_address0 = grp_dut_perform_conv_1_fu_174_output_3_V_address0;
+        mem_conv1_2_V_d0 = grp_dut_perform_conv_1_fu_246_output_2_V_d0;
+    end else begin
+        mem_conv1_2_V_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_2))) begin
+        mem_conv1_2_V_we0 = 1'b1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv1_2_V_we0 = grp_dut_perform_conv_1_fu_246_output_2_V_we0;
+    end else begin
+        mem_conv1_2_V_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_3))) begin
+        mem_conv1_3_V_address0 = newIndex26_fu_315_p1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st6_fsm_5)) begin
+        mem_conv1_3_V_address0 = newIndex3_fu_345_p1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv1_3_V_address0 = grp_dut_perform_conv_1_fu_246_output_3_V_address0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_3_V_address0 = grp_dut_perform_conv_fu_221_input_3_V_address0;
     end else begin
         mem_conv1_3_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv1_3_V_ce0 = grp_dut_perform_conv_fu_187_input_3_V_ce0;
+    if (((1'b1 == ap_sig_cseq_ST_st6_fsm_5) | ((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_3)))) begin
+        mem_conv1_3_V_ce0 = 1'b1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv1_3_V_ce0 = grp_dut_perform_conv_1_fu_174_output_3_V_ce0;
+        mem_conv1_3_V_ce0 = grp_dut_perform_conv_1_fu_246_output_3_V_ce0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv1_3_V_ce0 = grp_dut_perform_conv_fu_221_input_3_V_ce0;
     end else begin
         mem_conv1_3_V_ce0 = 1'b0;
     end
@@ -666,19 +770,47 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv2_V_address0 = grp_dut_perform_conv_fu_187_output_V_address0;
+        mem_conv1_3_V_ce1 = grp_dut_perform_conv_fu_221_input_3_V_ce1;
+    end else begin
+        mem_conv1_3_V_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_3))) begin
+        mem_conv1_3_V_d0 = tmp_4_cast_fu_293_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv2_V_address0 = grp_dut_perform_conv_1_fu_174_input_V_address0;
+        mem_conv1_3_V_d0 = grp_dut_perform_conv_1_fu_246_output_3_V_d0;
+    end else begin
+        mem_conv1_3_V_d0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (1'b0 == exitcond1_fu_266_p2) & (tmp_73_fu_301_p1 == ap_const_lv2_3))) begin
+        mem_conv1_3_V_we0 = 1'b1;
+    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv1_3_V_we0 = grp_dut_perform_conv_1_fu_246_output_3_V_we0;
+    end else begin
+        mem_conv1_3_V_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv2_V_address0 = grp_dut_perform_conv_1_fu_246_input_V_address0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv2_V_address0 = grp_dut_perform_conv_fu_221_output_V_address0;
     end else begin
         mem_conv2_V_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        mem_conv2_V_ce0 = grp_dut_perform_conv_fu_187_output_V_ce0;
-    end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv2_V_ce0 = grp_dut_perform_conv_1_fu_174_input_V_ce0;
+    if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
+        mem_conv2_V_ce0 = grp_dut_perform_conv_1_fu_246_input_V_ce0;
+    end else if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
+        mem_conv2_V_ce0 = grp_dut_perform_conv_fu_221_output_V_ce0;
     end else begin
         mem_conv2_V_ce0 = 1'b0;
     end
@@ -686,7 +818,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
-        mem_conv2_V_ce1 = grp_dut_perform_conv_1_fu_174_input_V_ce1;
+        mem_conv2_V_ce1 = grp_dut_perform_conv_1_fu_246_input_V_ce1;
     end else begin
         mem_conv2_V_ce1 = 1'b0;
     end
@@ -718,14 +850,14 @@ always @ (*) begin
             end
         end
         ap_ST_st2_fsm_1 : begin
-            if ((1'b0 == exitcond1_fu_207_p2)) begin
+            if ((1'b0 == exitcond1_fu_266_p2)) begin
                 ap_NS_fsm = ap_ST_st2_fsm_1;
             end else begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
             end
         end
         ap_ST_st3_fsm_2 : begin
-            if (~(1'b0 == grp_dut_perform_conv_fu_187_ap_done)) begin
+            if (~(1'b0 == grp_dut_perform_conv_fu_221_ap_done)) begin
                 ap_NS_fsm = ap_ST_st4_fsm_3;
             end else begin
                 ap_NS_fsm = ap_ST_st3_fsm_2;
@@ -735,14 +867,14 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_st5_fsm_4;
         end
         ap_ST_st5_fsm_4 : begin
-            if (~(1'b0 == grp_dut_perform_conv_1_fu_174_ap_done)) begin
+            if (~(1'b0 == grp_dut_perform_conv_1_fu_246_ap_done)) begin
                 ap_NS_fsm = ap_ST_st6_fsm_5;
             end else begin
                 ap_NS_fsm = ap_ST_st5_fsm_4;
             end
         end
         ap_ST_st6_fsm_5 : begin
-            if (~(exitcond_fu_244_p2 == 1'b0)) begin
+            if (~(exitcond_fu_323_p2 == 1'b0)) begin
                 ap_NS_fsm = ap_ST_st1_fsm_0;
             end else begin
                 ap_NS_fsm = ap_ST_st7_fsm_6;
@@ -779,19 +911,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_sig_227 = (1'b1 == ap_CS_fsm[ap_const_lv32_4]);
+    ap_sig_244 = (1'b1 == ap_CS_fsm[ap_const_lv32_4]);
 end
 
 always @ (*) begin
-    ap_sig_237 = (1'b1 == ap_CS_fsm[ap_const_lv32_D]);
+    ap_sig_254 = (1'b1 == ap_CS_fsm[ap_const_lv32_D]);
 end
 
 always @ (*) begin
-    ap_sig_248 = (1'b1 == ap_CS_fsm[ap_const_lv32_3]);
-end
-
-always @ (*) begin
-    ap_sig_282 = (1'b1 == ap_CS_fsm[ap_const_lv32_2]);
+    ap_sig_265 = (1'b1 == ap_CS_fsm[ap_const_lv32_2]);
 end
 
 always @ (*) begin
@@ -799,7 +927,11 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_sig_323 = (1'b1 == ap_CS_fsm[ap_const_lv32_7]);
+    ap_sig_366 = (1'b1 == ap_CS_fsm[ap_const_lv32_3]);
+end
+
+always @ (*) begin
+    ap_sig_433 = (1'b1 == ap_CS_fsm[ap_const_lv32_7]);
 end
 
 always @ (*) begin
@@ -818,60 +950,52 @@ always @ (*) begin
     ap_sig_97 = (1'b1 == ap_CS_fsm[ap_const_lv32_C]);
 end
 
-assign exitcond1_fu_207_p2 = ((bvh_d_index_reg_140 == ap_const_lv6_31) ? 1'b1 : 1'b0);
+assign exitcond1_fu_266_p2 = ((bvh_d_index_reg_198 == ap_const_lv6_31) ? 1'b1 : 1'b0);
 
-assign exitcond_fu_244_p2 = ((i2_reg_151 == ap_const_lv10_240) ? 1'b1 : 1'b0);
+assign exitcond_fu_323_p2 = ((i2_reg_209 == ap_const_lv10_240) ? 1'b1 : 1'b0);
 
-assign exp_V_2_fu_337_p2 = ($signed(exp_V_fu_327_p4) + $signed(ap_const_lv8_E2));
+assign exp_V_2_fu_391_p2 = ($signed(ap_const_lv8_E2) + $signed(exp_V_fu_381_p4));
 
-assign exp_V_fu_327_p4 = {{res_V_1_fu_323_p1[ap_const_lv32_1E : ap_const_lv32_17]}};
+assign exp_V_fu_381_p4 = {{res_V_1_fu_377_p1[ap_const_lv32_1E : ap_const_lv32_17]}};
 
-assign grp_dut_perform_conv_1_fu_174_ap_start = ap_reg_grp_dut_perform_conv_1_fu_174_ap_start;
+assign grp_dut_perform_conv_1_fu_246_ap_start = ap_reg_grp_dut_perform_conv_1_fu_246_ap_start;
 
-assign grp_dut_perform_conv_fu_187_ap_start = ap_reg_grp_dut_perform_conv_fu_187_ap_start;
+assign grp_dut_perform_conv_fu_221_ap_start = ap_reg_grp_dut_perform_conv_fu_221_ap_start;
 
-assign i2_off_fu_297_p2 = ($signed(i2_reg_151) + $signed(ap_const_lv10_338));
+assign i_2_fu_329_p2 = (i2_reg_209 + ap_const_lv10_1);
 
-assign i_2_fu_250_p2 = (i2_reg_151 + ap_const_lv10_1);
+assign i_fu_272_p2 = (bvh_d_index_reg_198 + ap_const_lv6_1);
 
-assign i_fu_213_p2 = (bvh_d_index_reg_140 + ap_const_lv6_1);
+assign index_assign_cast2_fu_262_p1 = bvh_d_index_reg_198;
 
-assign idx_urem_fu_268_p3 = ((tmp_46_fu_262_p2[0:0] === 1'b1) ? next_urem_fu_256_p2 : ap_const_lv10_0);
+assign newIndex26_fu_315_p1 = newIndex8_fu_305_p4;
 
-assign index_assign_2_cast6_fu_203_p1 = bvh_d_index_reg_140;
+assign newIndex3_fu_345_p1 = newIndex_fu_335_p4;
 
-assign index_assign_fu_239_p1 = bvh_d_index_reg_140;
+assign newIndex8_fu_305_p4 = {{bvh_d_index_reg_198[ap_const_lv32_5 : ap_const_lv32_2]}};
 
-assign mem_conv1_V_load_phi_fu_309_p3 = ((tmp_12_fu_303_p2[0:0] === 1'b1) ? mem_conv1_1_V_q0 : sel_tmp1_fu_289_p3);
+assign newIndex_fu_335_p4 = {{i2_reg_209[ap_const_lv32_9 : ap_const_lv32_2]}};
 
-assign newIndex3_fu_276_p1 = phi_urem_reg_163;
+assign output_V_address0 = tmp_5_fu_409_p1;
 
-assign next_urem_fu_256_p2 = (phi_urem_reg_163 + ap_const_lv10_1);
+assign output_V_d0 = ((tmp_6_reg_470[0:0] === 1'b1) ? ap_const_lv32_0 : p_Result_s_reg_475);
 
-assign output_V_address0 = tmp_5_fu_355_p1;
+assign p_Result_s_fu_397_p5 = {{res_V_1_fu_377_p1[32'd31 : 32'd31]}, {exp_V_2_fu_391_p2}, {res_V_1_fu_377_p1[32'd22 : 32'd0]}};
 
-assign output_V_d0 = ((tmp_6_reg_413[0:0] === 1'b1) ? ap_const_lv32_0 : p_Result_s_reg_418);
+assign res_V_1_fu_377_p1 = grp_fu_259_p1;
 
-assign p_Result_s_fu_343_p5 = {{res_V_1_fu_323_p1[32'd31 : 32'd31]}, {exp_V_2_fu_337_p2}, {res_V_1_fu_323_p1[32'd22 : 32'd0]}};
+assign tmp_4_cast_fu_293_p1 = tmp_s_fu_285_p3;
 
-assign res_V_1_fu_323_p1 = grp_fu_200_p1;
+assign tmp_5_fu_409_p1 = i2_reg_209;
 
-assign sel_tmp1_fu_289_p3 = ((tmp_fu_283_p2[0:0] === 1'b1) ? mem_conv1_0_V_q0 : mem_conv1_2_V_q0);
+assign tmp_6_fu_371_p2 = ((tmp_fu_357_p6 == ap_const_lv32_0) ? 1'b1 : 1'b0);
 
-assign tmp_12_fu_303_p2 = ((i2_off_fu_297_p2 < ap_const_lv10_C8) ? 1'b1 : 1'b0);
+assign tmp_72_fu_278_p3 = input_V[index_assign_cast2_fu_262_p1];
 
-assign tmp_45_fu_219_p3 = input_V[index_assign_2_cast6_fu_203_p1];
+assign tmp_73_fu_301_p1 = bvh_d_index_reg_198[1:0];
 
-assign tmp_46_fu_262_p2 = ((next_urem_fu_256_p2 < ap_const_lv10_C8) ? 1'b1 : 1'b0);
+assign tmp_fu_357_p5 = i2_reg_209[1:0];
 
-assign tmp_4_cast_fu_234_p1 = tmp_s_fu_226_p3;
-
-assign tmp_5_fu_355_p1 = i2_reg_151;
-
-assign tmp_6_fu_317_p2 = ((mem_conv1_V_load_phi_fu_309_p3 == ap_const_lv32_0) ? 1'b1 : 1'b0);
-
-assign tmp_fu_283_p2 = ((i2_reg_151 < ap_const_lv10_C8) ? 1'b1 : 1'b0);
-
-assign tmp_s_fu_226_p3 = {{tmp_45_fu_219_p3}, {ap_const_lv30_0}};
+assign tmp_s_fu_285_p3 = {{tmp_72_fu_278_p3}, {ap_const_lv30_0}};
 
 endmodule //dut_cnn_xcel

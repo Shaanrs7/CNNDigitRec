@@ -47,8 +47,8 @@ void cnn_xcel( digit input , bit32_t* output)
   fixed32_t mem_conv1[800]; //float
   fixed32_t mem_conv2[800];
 
-#pragma HLS array_partition variable= w_conv1 block factor=4  dim=1 
-//#pragma HLS array_partition variable= w_conv2 block factor=2 dim=1 
+#pragma HLS array_partition variable= w_conv1 cyclic factor=4  dim=1 
+//#pragma HLS array_partition variable= w_conv2 block factor=4 dim=1 
   // prepare input fmaps
   for (int i = 0; i < 49; i++) mem_conv1[i] = input[i];
 
