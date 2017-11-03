@@ -119,7 +119,6 @@ int i_index;
 // @param[out] : output - output fmaps
 
 void perform_dense (float* input, float*output, const float*weight, const float* bias, int M, int N) {
-<<<<<<< HEAD
 float biased;
 int w_index;
   for (int n = 0; n < N; n++) {
@@ -149,7 +148,7 @@ float biased;
       output[n+14] = output[n+14] + input[m] * weight[w_index+14*M] + input[m+1] * weight[w_index+14*M+1];// +  input[m+2] * weight[w_index+2] +  output[n] + input[m+3] * weight[w_index+3];
       output[n+15] = output[n+15] + input[m] * weight[w_index+15*M] + input[m+1] * weight[w_index+15*M+1];// +  input[m+2] * weight[w_index+2] +  output[n] + input[m+3] * weight[w_index+3];
 */
->>>>>>> 29c6e9d16681101eca6b6ec1b6613ee646e7d4fc
+
     }
      biased = output[n] + bias[n];
     output[n] = (biased > 0) ? biased : 0;
